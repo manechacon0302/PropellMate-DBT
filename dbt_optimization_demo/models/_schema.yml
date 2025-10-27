@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: semantic_layer
+    description: "Source tables from the semantic layer containing customer and order data"
+    database: propellingtech-demo-customers
+    schema: dbt_semantic_layer_demo
+    tables:
+      - name: dim_customers
+        description: "Dimension table containing customer information"
+        columns:
+          - name: customer_id
+            description: "Unique identifier for each customer"
+          - name: name
+            description: "Customer name"
+      
+      - name: fct_orders
+        description: "Fact table containing order transactions"
+        columns:
+          - name: order_id
+            description: "Unique identifier for each order"
+          - name: customer_id
+            description: "Foreign key to dim_customers"
+          - name: order_total
+            description: "Total amount of the order"
+          - name: ordered_at
+            description: "Timestamp when the order was placed"
+      
+      - name: order_items
+        description: "Table containing individual items within orders"
+        columns:
+          - name: order_item_id
+            description: "Unique identifier for each order item"
+          - name: order_id
+            description: "Foreign key to fct_orders"
+          - name: is_food_item
+            description: "Flag indicating if the item is food (1) or not (0)"
+          - name: is_drink_item
+            description: "Flag indicating if the item is a drink (1) or not (0)"
