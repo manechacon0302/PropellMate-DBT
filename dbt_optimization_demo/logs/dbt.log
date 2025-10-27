@@ -1419,3 +1419,253 @@ Runtime Error
 [0m22:42:55.312389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDD2AB7C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDD2AB7D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDD2AB7D90>]}
 [0m22:42:55.312389 [debug] [MainThread]: Flushing usage events
 [0m22:42:55.712503 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:52:38.098626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BAAE68B350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BAAE68BAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BAAE68BFD0>]}
+
+
+============================== 22:52:38.108244 | 2bed61f3-7042-4086-b4ec-131fa31bdb55 ==============================
+[0m22:52:38.108244 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:52:38.108244 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt build', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:52:40.522579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2bed61f3-7042-4086-b4ec-131fa31bdb55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BAAE6C9050>]}
+[0m22:52:40.728192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2bed61f3-7042-4086-b4ec-131fa31bdb55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BAA95CB610>]}
+[0m22:52:40.730203 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m22:52:41.667684 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m22:52:41.922330 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 3 files changed.
+[0m22:52:41.922330 [debug] [MainThread]: Partial parsing: added file: dbt_optimization_demo://models\_models.yml
+[0m22:52:41.922330 [debug] [MainThread]: Partial parsing: added file: dbt_optimization_demo://models\_schema.yml
+[0m22:52:41.925972 [debug] [MainThread]: Partial parsing: updated file: dbt_optimization_demo://models\customerswithorders.sql
+[0m22:52:41.925972 [debug] [MainThread]: Partial parsing: updated file: dbt_optimization_demo://models\countfooddrinkorders.sql
+[0m22:52:41.925972 [debug] [MainThread]: Partial parsing: updated file: dbt_optimization_demo://models\totalordercustomername.sql
+[0m22:52:42.274546 [error] [MainThread]: Encountered an error:
+Compilation Error in model customerswithorders (models\customerswithorders.sql)
+  source() takes exactly two arguments (0 given)
+[0m22:52:42.274546 [debug] [MainThread]: Command `dbt build` failed at 22:52:42.274546 after 4.32 seconds
+[0m22:52:42.282667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BAAE3863D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BAAE6E2F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BAAE6E2E10>]}
+[0m22:52:42.282667 [debug] [MainThread]: Flushing usage events
+[0m22:52:42.695151 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:06:51.345267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC0A696A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC0A696850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC0A696C90>]}
+
+
+============================== 23:06:51.354819 | 31f80d2d-c43f-4101-b1eb-e92ad5525ba1 ==============================
+[0m23:06:51.354819 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:06:51.356828 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt build', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:06:53.627778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '31f80d2d-c43f-4101-b1eb-e92ad5525ba1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC2712EB90>]}
+[0m23:06:53.853091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '31f80d2d-c43f-4101-b1eb-e92ad5525ba1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC055DB9D0>]}
+[0m23:06:53.854844 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:06:54.795089 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:06:55.053201 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 3 files changed.
+[0m23:06:55.055449 [debug] [MainThread]: Partial parsing: added file: dbt_optimization_demo://models\models.yml
+[0m23:06:55.055449 [debug] [MainThread]: Partial parsing: added file: dbt_optimization_demo://models\schema.yml
+[0m23:06:55.055449 [debug] [MainThread]: Partial parsing: updated file: dbt_optimization_demo://models\countfooddrinkorders.sql
+[0m23:06:55.059482 [debug] [MainThread]: Partial parsing: updated file: dbt_optimization_demo://models\totalordercustomername.sql
+[0m23:06:55.062741 [debug] [MainThread]: Partial parsing: updated file: dbt_optimization_demo://models\customerswithorders.sql
+[0m23:06:55.412885 [error] [MainThread]: Encountered an error:
+Compilation Error in model countfooddrinkorders (models\countfooddrinkorders.sql)
+  source() takes exactly two arguments (0 given)
+[0m23:06:55.412885 [debug] [MainThread]: Command `dbt build` failed at 23:06:55.412885 after 4.27 seconds
+[0m23:06:55.412885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC0488DED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC0A6EF5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC0A6EF6D0>]}
+[0m23:06:55.421707 [debug] [MainThread]: Flushing usage events
+[0m23:06:55.829750 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:11:13.212895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FDB8FCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FDB8F410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FDB8D590>]}
+
+
+============================== 23:11:13.226913 | 6ee56db5-1e88-4df3-b959-3ad17b07ea66 ==============================
+[0m23:11:13.226913 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:11:13.226913 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt clean', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:11:13.433079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6ee56db5-1e88-4df3-b959-3ad17b07ea66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FDC41E90>]}
+[0m23:11:13.513067 [debug] [MainThread]: Command `dbt clean` succeeded at 23:11:13.513067 after 0.41 seconds
+[0m23:11:13.513067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FDC09E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FDC0A350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FD9E9E90>]}
+[0m23:11:13.515418 [debug] [MainThread]: Flushing usage events
+[0m23:11:13.950671 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:11:24.233142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017AF368FAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017AF34E9B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017AF34E9990>]}
+
+
+============================== 23:11:24.246053 | e9dc49f3-68aa-491a-b939-2e1f3097b59e ==============================
+[0m23:11:24.246053 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:11:24.246053 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m23:11:26.520662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e9dc49f3-68aa-491a-b939-2e1f3097b59e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A907175D0>]}
+[0m23:11:26.760883 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e9dc49f3-68aa-491a-b939-2e1f3097b59e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017AEE609C10>]}
+[0m23:11:26.762895 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:11:27.723085 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:11:27.723085 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:11:27.723085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e9dc49f3-68aa-491a-b939-2e1f3097b59e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017AF32433D0>]}
+[0m23:11:29.542308 [error] [MainThread]: Encountered an error:
+Compilation Error in model countfooddrinkorders (models\countfooddrinkorders.sql)
+  source() takes exactly two arguments (0 given)
+[0m23:11:29.544433 [debug] [MainThread]: Command `dbt compile` failed at 23:11:29.544433 after 5.45 seconds
+[0m23:11:29.546217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017AED88DED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017AF36E3710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017AF36E18D0>]}
+[0m23:11:29.546217 [debug] [MainThread]: Flushing usage events
+[0m23:11:29.987014 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:13:37.584086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229EA68B5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229EA68B7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229EA68B190>]}
+
+
+============================== 23:13:37.592388 | b678b51a-b280-4aca-bcb3-43f625498905 ==============================
+[0m23:13:37.592388 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:13:37.593396 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:13:37.683221 [info ] [MainThread]: dbt version: 1.9.4
+[0m23:13:37.683221 [info ] [MainThread]: python version: 3.11.9
+[0m23:13:37.683221 [info ] [MainThread]: python path: C:\Users\ManeChacon\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+[0m23:13:37.693021 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m23:13:39.609317 [info ] [MainThread]: Using profiles dir at C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo
+[0m23:13:39.611396 [info ] [MainThread]: Using profiles.yml file at C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\profiles.yml
+[0m23:13:39.613405 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\dbt_project.yml
+[0m23:13:39.613405 [info ] [MainThread]: adapter type: bigquery
+[0m23:13:39.617077 [info ] [MainThread]: adapter version: 1.9.1
+[0m23:13:39.903116 [info ] [MainThread]: Configuration:
+[0m23:13:39.903116 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:13:39.903116 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:13:39.908445 [info ] [MainThread]: Required dependencies:
+[0m23:13:39.908445 [debug] [MainThread]: Executing "git --help"
+[0m23:13:40.005201 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:13:40.006686 [debug] [MainThread]: STDERR: "b''"
+[0m23:13:40.008536 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:13:40.008536 [info ] [MainThread]: Connection:
+[0m23:13:40.008536 [info ] [MainThread]:   method: oauth
+[0m23:13:40.013017 [info ] [MainThread]:   database: propellingtech-demo-customers
+[0m23:13:40.013017 [info ] [MainThread]:   execution_project: propellingtech-demo-customers
+[0m23:13:40.013017 [info ] [MainThread]:   schema: dbt_semantic_layer_demo
+[0m23:13:40.017150 [info ] [MainThread]:   location: europe-west1
+[0m23:13:40.019271 [info ] [MainThread]:   priority: None
+[0m23:13:40.019271 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m23:13:40.022908 [info ] [MainThread]:   impersonate_service_account: None
+[0m23:13:40.025179 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m23:13:40.025817 [info ] [MainThread]:   job_retries: 1
+[0m23:13:40.030404 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m23:13:40.030404 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m23:13:40.033223 [info ] [MainThread]:   timeout_seconds: None
+[0m23:13:40.034710 [info ] [MainThread]:   client_id: None
+[0m23:13:40.036827 [info ] [MainThread]:   token_uri: None
+[0m23:13:40.039579 [info ] [MainThread]:   dataproc_region: None
+[0m23:13:40.040890 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m23:13:40.040890 [info ] [MainThread]:   gcs_bucket: None
+[0m23:13:40.043404 [info ] [MainThread]:   dataproc_batch: None
+[0m23:13:40.043404 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:13:40.865271 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m23:13:40.865271 [debug] [MainThread]: On debug: select 1 as id
+[0m23:13:40.865271 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:13:44.235204 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:16dfa5e8-f17d-4df7-9e42-be74310ad2a5&page=queryresults
+[0m23:13:44.842974 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:13:44.847971 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:13:44.850343 [debug] [MainThread]: Command `dbt debug` succeeded at 23:13:44.850343 after 7.43 seconds
+[0m23:13:44.850343 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:13:44.853345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229E56090D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229E4912D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229E4912D50>]}
+[0m23:13:44.853345 [debug] [MainThread]: Flushing usage events
+[0m23:13:45.247466 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:16:08.533228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C1A39D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C18D64D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C1A39AD0>]}
+
+
+============================== 23:16:08.544190 | d6a90075-1e4f-4c2a-8a8a-5c7b2790a239 ==============================
+[0m23:16:08.544190 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:16:08.546211 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m23:16:10.633001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd6a90075-1e4f-4c2a-8a8a-5c7b2790a239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DF151410>]}
+[0m23:16:10.873329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd6a90075-1e4f-4c2a-8a8a-5c7b2790a239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165BDB7B990>]}
+[0m23:16:10.873329 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:16:11.843464 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:16:11.843464 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:16:11.853072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd6a90075-1e4f-4c2a-8a8a-5c7b2790a239', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165DF6F98D0>]}
+[0m23:16:13.613418 [error] [MainThread]: Encountered an error:
+Compilation Error in model countfooddrinkorders (models\countfooddrinkorders.sql)
+  source() takes exactly two arguments (0 given)
+[0m23:16:13.613418 [debug] [MainThread]: Command `dbt compile` failed at 23:16:13.613418 after 5.21 seconds
+[0m23:16:13.613418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165BCE0DED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C1BD9ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165C1BD9A50>]}
+[0m23:16:13.613418 [debug] [MainThread]: Flushing usage events
+[0m23:16:14.043207 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:19:13.780204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3C93880D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3C93B7E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3C93B4050>]}
+
+
+============================== 23:19:13.788502 | 58028b27-641f-4c7a-9e87-2395871010ee ==============================
+[0m23:19:13.788502 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:19:13.790509 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt clean', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:19:14.048451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '58028b27-641f-4c7a-9e87-2395871010ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3C945BE10>]}
+[0m23:19:14.085656 [debug] [MainThread]: Command `dbt clean` succeeded at 23:19:14.085656 after 0.49 seconds
+[0m23:19:14.085656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3C362DED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3C9409D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3C940A210>]}
+[0m23:19:14.093355 [debug] [MainThread]: Flushing usage events
+[0m23:19:14.537142 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:19:21.163550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2A3D07F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2A3B69850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2A3B69E50>]}
+
+
+============================== 23:19:21.172680 | d0d696d3-57a5-44b3-bd5d-0143588595ee ==============================
+[0m23:19:21.172680 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:19:21.173184 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:19:23.323298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd0d696d3-57a5-44b3-bd5d-0143588595ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2C1E3A350>]}
+[0m23:19:23.545010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd0d696d3-57a5-44b3-bd5d-0143588595ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D29FCA9F10>]}
+[0m23:19:23.545010 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:19:24.477802 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:19:24.483496 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:19:24.484567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd0d696d3-57a5-44b3-bd5d-0143588595ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2A389FE50>]}
+[0m23:19:25.807147 [error] [MainThread]: Encountered an error:
+Compilation Error in model countfooddrinkorders (models\countfooddrinkorders.sql)
+  source() takes exactly two arguments (0 given)
+[0m23:19:25.807147 [debug] [MainThread]: Command `dbt run` failed at 23:19:25.807147 after 4.81 seconds
+[0m23:19:25.811569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D29EEFDED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2A3D663D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2A3D65150>]}
+[0m23:19:25.813242 [debug] [MainThread]: Flushing usage events
+[0m23:19:26.203284 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:23:47.311952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F636FE1190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F636FE1410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F636FE26D0>]}
+
+
+============================== 23:23:47.320184 | ea1fb16c-744a-4d53-b94a-302fdf970eee ==============================
+[0m23:23:47.320184 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:23:47.320184 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt compile', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:23:49.528473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ea1fb16c-744a-4d53-b94a-302fdf970eee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F652890890>]}
+[0m23:23:49.793730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ea1fb16c-744a-4d53-b94a-302fdf970eee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F632ECBBD0>]}
+[0m23:23:49.793730 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:23:50.744692 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:23:50.744692 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:23:50.744692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ea1fb16c-744a-4d53-b94a-302fdf970eee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F656533850>]}
+[0m23:23:52.464314 [error] [MainThread]: Encountered an error:
+Compilation Error in model countfooddrinkorders (models\countfooddrinkorders.sql)
+  source() takes exactly two arguments (0 given)
+[0m23:23:52.473643 [debug] [MainThread]: Command `dbt compile` failed at 23:23:52.473643 after 5.33 seconds
+[0m23:23:52.473643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F63211DED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F636FFCD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F636FFCD50>]}
+[0m23:23:52.473643 [debug] [MainThread]: Flushing usage events
+[0m23:23:52.878461 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:27:46.506540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7C0B8B350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7C0BB7F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7C0BB7410>]}
+
+
+============================== 23:27:46.517730 | 777430cb-1b4d-4906-86c3-8775af60cfa0 ==============================
+[0m23:27:46.517730 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:27:46.517730 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt clean', 'send_anonymous_usage_stats': 'True'}
+[0m23:27:46.642513 [error] [MainThread]: Encountered an error:
+Runtime Error
+  at path []: Additional properties are not allowed ('config-paths' was unexpected)
+
+Error encountered in C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\dbt_project.yml
+[0m23:27:46.644795 [debug] [MainThread]: Command `dbt clean` failed at 23:27:46.644795 after 0.28 seconds
+[0m23:27:46.646969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7BACADED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7BAD32D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7C0C0A6D0>]}
+[0m23:27:46.646969 [debug] [MainThread]: Flushing usage events
+[0m23:27:47.146350 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:30:15.433470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016E3548D350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016E339BE190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016E3548DC50>]}
+
+
+============================== 23:30:15.440455 | 22a15dd2-76ce-45a5-989e-6af3cb681f51 ==============================
+[0m23:30:15.440455 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:30:15.443483 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run --model countfooddrinkorders.sql', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:30:17.343797 [error] [MainThread]: Encountered an error:
+Runtime Error
+  at path []: Additional properties are not allowed ('config-paths' was unexpected)
+
+Error encountered in C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\dbt_project.yml
+[0m23:30:17.348862 [debug] [MainThread]: Command `dbt run` failed at 23:30:17.348862 after 2.05 seconds
+[0m23:30:17.348862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016E354E5150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016E35502A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016E35502F90>]}
+[0m23:30:17.348862 [debug] [MainThread]: Flushing usage events
+[0m23:30:17.926668 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:30:35.383867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C36778BA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3677BB8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3676AF450>]}
+
+
+============================== 23:30:35.393577 | 0b84b6b6-e426-400e-b41d-ae4a3f1af591 ==============================
+[0m23:30:35.393577 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:30:35.393577 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --model countfooddrinkorders.sql', 'send_anonymous_usage_stats': 'True'}
+[0m23:30:37.453903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0b84b6b6-e426-400e-b41d-ae4a3f1af591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C30498C210>]}
+[0m23:30:37.649322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0b84b6b6-e426-400e-b41d-ae4a3f1af591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C36263B590>]}
+[0m23:30:37.653896 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:30:38.523804 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:30:38.523804 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:30:38.523804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0b84b6b6-e426-400e-b41d-ae4a3f1af591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C302346850>]}
+[0m23:30:39.663732 [error] [MainThread]: Encountered an error:
+Compilation Error in model countfooddrinkorders (models\countfooddrinkorders.sql)
+  source() takes exactly two arguments (0 given)
+[0m23:30:39.663732 [debug] [MainThread]: Command `dbt run` failed at 23:30:39.663732 after 4.43 seconds
+[0m23:30:39.663732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C367804CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3677CC710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C304E2DD50>]}
+[0m23:30:39.663732 [debug] [MainThread]: Flushing usage events
+[0m23:30:40.063748 [debug] [MainThread]: An error was encountered while trying to flush usage events
