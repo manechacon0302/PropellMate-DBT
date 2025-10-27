@@ -1,0 +1,1421 @@
+[0m10:29:35.428510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F34409D090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3440E3C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3440E28D0>]}
+
+
+============================== 10:29:35.436794 | ea760988-122b-485d-a89b-7396782865bb ==============================
+[0m10:29:35.436794 [info ] [MainThread]: Running with dbt=1.9.4
+[0m10:29:35.438303 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\ManeChacon\\dbtproject-demo\\dbt_optimization_demo\\logs', 'profiles_dir': 'C:\\Users\\ManeChacon\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt build', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:29:36.691551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ea760988-122b-485d-a89b-7396782865bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F35EB1F3D0>]}
+[0m10:29:36.871582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ea760988-122b-485d-a89b-7396782865bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F35EC5E790>]}
+[0m10:29:36.875561 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m10:29:37.788332 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m10:29:37.791326 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:29:37.791326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ea760988-122b-485d-a89b-7396782865bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F360BDD210>]}
+[0m10:29:43.330532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ea760988-122b-485d-a89b-7396782865bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3627EA610>]}
+[0m10:29:43.408028 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\dbtproject-demo\dbt_optimization_demo\target\manifest.json
+[0m10:29:43.419695 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\dbtproject-demo\dbt_optimization_demo\target\semantic_manifest.json
+[0m10:29:43.576024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ea760988-122b-485d-a89b-7396782865bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F362B67310>]}
+[0m10:29:43.578286 [info ] [MainThread]: Found 2 models, 4 data tests, 491 macros
+[0m10:29:43.580352 [info ] [MainThread]: 
+[0m10:29:43.580352 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:29:43.588083 [info ] [MainThread]: 
+[0m10:29:43.588083 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:29:43.602663 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m10:29:43.602663 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:29:50.608623 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_propellingtech-demo-customers, now create_propellingtech-demo-customers_dbt_semantic_layer_demo)
+[0m10:29:50.621854 [debug] [ThreadPool]: Creating schema "database: "propellingtech-demo-customers"
+schema: "dbt_semantic_layer_demo"
+"
+[0m10:29:50.638486 [debug] [ThreadPool]: On create_propellingtech-demo-customers_dbt_semantic_layer_demo: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_optimization_demo", "target_name": "dev", "connection_name": "create_propellingtech-demo-customers_dbt_semantic_layer_demo"} */
+create schema if not exists `propellingtech-demo-customers`.`dbt_semantic_layer_demo`
+  
+[0m10:29:50.638486 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:29:51.103314 [error] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:EU:6a595275-00d3-402f-bbc2-b015a6deee31&page=queryresults
+[0m10:29:51.105784 [debug] [ThreadPool]: BigQuery adapter: Unhandled error while running:
+macro create_schema
+[0m10:29:51.105784 [debug] [ThreadPool]: BigQuery adapter: Database Error
+  Access Denied: Project propellingtech-demo-customers: User does not have bigquery.jobs.create permission in project propellingtech-demo-customers.
+[0m10:29:51.111486 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:29:51.113246 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:29:51.115257 [debug] [MainThread]: Connection 'create_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m10:29:51.117266 [info ] [MainThread]: 
+[0m10:29:51.121336 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 7.53 seconds (7.53s).
+[0m10:29:51.123347 [error] [MainThread]: Encountered an error:
+Database Error
+  Access Denied: Project propellingtech-demo-customers: User does not have bigquery.jobs.create permission in project propellingtech-demo-customers.
+[0m10:29:51.129427 [debug] [MainThread]: Command `dbt build` failed at 10:29:51.129427 after 15.89 seconds
+[0m10:29:51.131276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F33E1ADED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F362B942D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F342EE9750>]}
+[0m10:29:51.131276 [debug] [MainThread]: Flushing usage events
+[0m10:29:51.820978 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:31:52.614181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001555A597A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001555A596190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001555A5979D0>]}
+
+
+============================== 10:31:52.621359 | 0387570d-4e1f-423c-9880-750058b93a3f ==============================
+[0m10:31:52.621359 [info ] [MainThread]: Running with dbt=1.9.4
+[0m10:31:52.622419 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'c:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'profiles_dir': 'C:\\Users\\ManeChacon\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'True'}
+[0m10:31:52.773333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0387570d-4e1f-423c-9880-750058b93a3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001555A692E10>]}
+[0m10:31:53.058105 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:31:53.063104 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:31:53.063104 [debug] [MainThread]: Command `cli deps` succeeded at 10:31:53.063104 after 0.53 seconds
+[0m10:31:53.063104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001555A583F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001555A286110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000155545989D0>]}
+[0m10:31:53.063104 [debug] [MainThread]: Flushing usage events
+[0m10:31:53.522867 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:33:14.695258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0AEC9C390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0AECE3D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0AECE2A50>]}
+
+
+============================== 10:33:14.701582 | ffa19bcd-7839-4ebf-a81c-02b5fb49fe76 ==============================
+[0m10:33:14.701582 [info ] [MainThread]: Running with dbt=1.9.4
+[0m10:33:14.701582 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\.dbt', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt build', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:33:15.986376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ffa19bcd-7839-4ebf-a81c-02b5fb49fe76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0CC790E10>]}
+[0m10:33:16.182546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ffa19bcd-7839-4ebf-a81c-02b5fb49fe76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0AABBFC90>]}
+[0m10:33:16.182546 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m10:33:16.678639 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m10:33:16.859809 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:33:16.859809 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:33:16.913999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ffa19bcd-7839-4ebf-a81c-02b5fb49fe76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0CE21B510>]}
+[0m10:33:17.004037 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m10:33:17.014287 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m10:33:17.048147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ffa19bcd-7839-4ebf-a81c-02b5fb49fe76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0CE4D35D0>]}
+[0m10:33:17.048147 [info ] [MainThread]: Found 2 models, 4 data tests, 491 macros
+[0m10:33:17.048147 [info ] [MainThread]: 
+[0m10:33:17.048147 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:33:17.054843 [info ] [MainThread]: 
+[0m10:33:17.054843 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:33:17.058509 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m10:33:17.058509 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:33:19.296815 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_propellingtech-demo-customers, now create_propellingtech-demo-customers_dbt_semantic_layer_demo)
+[0m10:33:19.299986 [debug] [ThreadPool]: Creating schema "database: "propellingtech-demo-customers"
+schema: "dbt_semantic_layer_demo"
+"
+[0m10:33:19.318558 [debug] [ThreadPool]: On create_propellingtech-demo-customers_dbt_semantic_layer_demo: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_optimization_demo", "target_name": "dev", "connection_name": "create_propellingtech-demo-customers_dbt_semantic_layer_demo"} */
+create schema if not exists `propellingtech-demo-customers`.`dbt_semantic_layer_demo`
+  
+[0m10:33:19.318558 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:33:19.858735 [error] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:EU:6679e963-ab49-4ebb-a92c-1076360b1e23&page=queryresults
+[0m10:33:19.860339 [debug] [ThreadPool]: BigQuery adapter: Unhandled error while running:
+macro create_schema
+[0m10:33:19.863843 [debug] [ThreadPool]: BigQuery adapter: Database Error
+  Access Denied: Project propellingtech-demo-customers: User does not have bigquery.jobs.create permission in project propellingtech-demo-customers.
+[0m10:33:19.863843 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:33:19.868518 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:33:19.868518 [debug] [MainThread]: Connection 'create_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m10:33:19.868518 [info ] [MainThread]: 
+[0m10:33:19.872609 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 2.81 seconds (2.81s).
+[0m10:33:19.876641 [error] [MainThread]: Encountered an error:
+Database Error
+  Access Denied: Project propellingtech-demo-customers: User does not have bigquery.jobs.create permission in project propellingtech-demo-customers.
+[0m10:33:19.880416 [debug] [MainThread]: Command `dbt build` failed at 10:33:19.880416 after 5.29 seconds
+[0m10:33:19.880416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0AEC95F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0AECE3CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0CE4FDA50>]}
+[0m10:33:19.882439 [debug] [MainThread]: Flushing usage events
+[0m10:33:20.329482 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:51:56.379641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A90EE9C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A90EE94E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A90EE956D0>]}
+
+
+============================== 10:51:56.392708 | 097acfa5-38d0-4658-9a86-797d7f1af963 ==============================
+[0m10:51:56.392708 [info ] [MainThread]: Running with dbt=1.9.4
+[0m10:51:56.392708 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'profiles_dir': 'C:\\Users\\ManeChacon\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt build', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:51:57.789874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '097acfa5-38d0-4658-9a86-797d7f1af963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A90EE9C490>]}
+[0m10:51:57.952899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '097acfa5-38d0-4658-9a86-797d7f1af963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A90ADD9B50>]}
+[0m10:51:57.959791 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m10:51:58.441831 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m10:51:58.590514 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:51:58.590514 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:51:58.627098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '097acfa5-38d0-4658-9a86-797d7f1af963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A92E0D9410>]}
+[0m10:51:58.689718 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m10:51:58.689718 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m10:51:58.727620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '097acfa5-38d0-4658-9a86-797d7f1af963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A92E7CFC50>]}
+[0m10:51:58.728499 [info ] [MainThread]: Found 2 models, 4 data tests, 491 macros
+[0m10:51:58.729516 [info ] [MainThread]: 
+[0m10:51:58.729516 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:51:58.729516 [info ] [MainThread]: 
+[0m10:51:58.729516 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:51:58.729516 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m10:51:58.729516 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:52:01.169479 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_propellingtech-demo-customers, now create_propellingtech-demo-customers_dbt_semantic_layer_demo)
+[0m10:52:01.169479 [debug] [ThreadPool]: Creating schema "database: "propellingtech-demo-customers"
+schema: "dbt_semantic_layer_demo"
+"
+[0m10:52:01.199524 [debug] [ThreadPool]: On create_propellingtech-demo-customers_dbt_semantic_layer_demo: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_optimization_demo", "target_name": "dev", "connection_name": "create_propellingtech-demo-customers_dbt_semantic_layer_demo"} */
+create schema if not exists `propellingtech-demo-customers`.`dbt_semantic_layer_demo`
+  
+[0m10:52:01.199524 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:52:01.839679 [error] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:EU:4cf73387-a0ee-4416-83bb-d5a63bf3e8ac&page=queryresults
+[0m10:52:01.842487 [debug] [ThreadPool]: BigQuery adapter: Unhandled error while running:
+macro create_schema
+[0m10:52:01.842487 [debug] [ThreadPool]: BigQuery adapter: Database Error
+  Access Denied: Project propellingtech-demo-customers: User does not have bigquery.jobs.create permission in project propellingtech-demo-customers.
+[0m10:52:01.842487 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:52:01.850002 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:52:01.850002 [debug] [MainThread]: Connection 'create_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m10:52:01.850002 [info ] [MainThread]: 
+[0m10:52:01.850002 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 3.12 seconds (3.12s).
+[0m10:52:01.850002 [error] [MainThread]: Encountered an error:
+Database Error
+  Access Denied: Project propellingtech-demo-customers: User does not have bigquery.jobs.create permission in project propellingtech-demo-customers.
+[0m10:52:01.860329 [debug] [MainThread]: Command `dbt build` failed at 10:52:01.859913 after 5.67 seconds
+[0m10:52:01.862614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A90EE8BA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A90EEE9890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A90A0B2D10>]}
+[0m10:52:01.865875 [debug] [MainThread]: Flushing usage events
+[0m10:52:02.319593 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:58:09.682867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6B2094C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6B2094CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6B2094FD0>]}
+
+
+============================== 10:58:09.691905 | d8ce00cb-a0c6-41cf-a053-fa8f7715241d ==============================
+[0m10:58:09.691905 [info ] [MainThread]: Running with dbt=1.9.4
+[0m10:58:09.691905 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'profiles_dir': 'C:\\Users\\ManeChacon\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m10:58:10.961692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd8ce00cb-a0c6-41cf-a053-fa8f7715241d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6CEB39650>]}
+[0m10:58:11.107883 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd8ce00cb-a0c6-41cf-a053-fa8f7715241d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6ACF4B890>]}
+[0m10:58:11.111562 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m10:58:11.571694 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m10:58:11.745052 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:58:11.745052 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:58:11.794672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd8ce00cb-a0c6-41cf-a053-fa8f7715241d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6B0BE1850>]}
+[0m10:58:11.871775 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m10:58:11.875952 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m10:58:11.912161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd8ce00cb-a0c6-41cf-a053-fa8f7715241d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6D08D35D0>]}
+[0m10:58:11.921881 [info ] [MainThread]: Found 2 models, 4 data tests, 491 macros
+[0m10:58:11.921881 [info ] [MainThread]: 
+[0m10:58:11.921881 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:58:11.921881 [info ] [MainThread]: 
+[0m10:58:11.921881 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:58:11.933940 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m10:58:11.933940 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:58:14.163931 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_propellingtech-demo-customers, now create_propellingtech-demo-customers_dbt_semantic_layer_demo)
+[0m10:58:14.163931 [debug] [ThreadPool]: Creating schema "database: "propellingtech-demo-customers"
+schema: "dbt_semantic_layer_demo"
+"
+[0m10:58:14.182106 [debug] [ThreadPool]: On create_propellingtech-demo-customers_dbt_semantic_layer_demo: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_optimization_demo", "target_name": "dev", "connection_name": "create_propellingtech-demo-customers_dbt_semantic_layer_demo"} */
+create schema if not exists `propellingtech-demo-customers`.`dbt_semantic_layer_demo`
+  
+[0m10:58:14.182106 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:58:14.675852 [error] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:EU:3096ae7c-74d5-4386-a962-1377db4880ac&page=queryresults
+[0m10:58:14.677871 [debug] [ThreadPool]: BigQuery adapter: Unhandled error while running:
+macro create_schema
+[0m10:58:14.677871 [debug] [ThreadPool]: BigQuery adapter: Database Error
+  Access Denied: Project propellingtech-demo-customers: User does not have bigquery.jobs.create permission in project propellingtech-demo-customers.
+[0m10:58:14.682030 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:58:14.682030 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:58:14.682030 [debug] [MainThread]: Connection 'create_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m10:58:14.682030 [info ] [MainThread]: 
+[0m10:58:14.682030 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 2.76 seconds (2.76s).
+[0m10:58:14.691982 [error] [MainThread]: Encountered an error:
+Database Error
+  Access Denied: Project propellingtech-demo-customers: User does not have bigquery.jobs.create permission in project propellingtech-demo-customers.
+[0m10:58:14.696015 [debug] [MainThread]: Command `dbt build` failed at 10:58:14.696015 after 5.09 seconds
+[0m10:58:14.698028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6AC19DED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6B20E84D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6B20E8A50>]}
+[0m10:58:14.698028 [debug] [MainThread]: Flushing usage events
+[0m10:58:15.164805 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:02:18.975866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176E4C9F050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176E4CE33D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176E4CE26D0>]}
+
+
+============================== 11:02:18.985897 | 573091ce-b690-44d8-9c18-52e7d21bd271 ==============================
+[0m11:02:18.985897 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:02:18.985897 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt build', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:02:20.370468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '573091ce-b690-44d8-9c18-52e7d21bd271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176E4087C50>]}
+[0m11:02:20.512840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '573091ce-b690-44d8-9c18-52e7d21bd271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176E0BBBC10>]}
+[0m11:02:20.514849 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:02:20.976071 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m11:02:21.125641 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:02:21.125641 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:02:21.155742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '573091ce-b690-44d8-9c18-52e7d21bd271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176841AC750>]}
+[0m11:02:21.220584 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m11:02:21.236820 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m11:02:21.275962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '573091ce-b690-44d8-9c18-52e7d21bd271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176844D3790>]}
+[0m11:02:21.279244 [info ] [MainThread]: Found 2 models, 4 data tests, 491 macros
+[0m11:02:21.282208 [info ] [MainThread]: 
+[0m11:02:21.284220 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:02:21.286778 [info ] [MainThread]: 
+[0m11:02:21.286778 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:02:21.295962 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m11:02:21.298339 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:02:23.405989 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo'
+[0m11:02:23.405989 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:02:25.247327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '573091ce-b690-44d8-9c18-52e7d21bd271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017682DDA010>]}
+[0m11:02:25.249108 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:02:25.269261 [debug] [Thread-1 (]: Began running node model.dbt_optimization_demo.my_first_dbt_model
+[0m11:02:25.271135 [info ] [Thread-1 (]: 1 of 6 START sql table model dbt_semantic_layer_demo.my_first_dbt_model ........ [RUN]
+[0m11:02:25.273157 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.my_first_dbt_model'
+[0m11:02:25.276240 [debug] [Thread-1 (]: Began compiling node model.dbt_optimization_demo.my_first_dbt_model
+[0m11:02:25.299552 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_optimization_demo.my_first_dbt_model"
+[0m11:02:25.306648 [debug] [Thread-1 (]: Began executing node model.dbt_optimization_demo.my_first_dbt_model
+[0m11:02:25.381969 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_optimization_demo.my_first_dbt_model"
+[0m11:02:25.391283 [debug] [Thread-1 (]: On model.dbt_optimization_demo.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_optimization_demo", "target_name": "dev", "node_id": "model.dbt_optimization_demo.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m11:02:25.391283 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:02:25.640142 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:EU:050ba9e7-5344-4d09-b6ff-684f525a3bef&page=queryresults
+[0m11:02:25.640142 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:EU:050ba9e7-5344-4d09-b6ff-684f525a3bef&page=queryresults
+[0m11:02:25.948557 [debug] [Thread-1 (]: Database Error in model my_first_dbt_model (models\example\my_first_dbt_model.sql)
+  Not found: Dataset propellingtech-demo-customers:dbt_semantic_layer_demo was not found in location EU
+  compiled code at target\run\dbt_optimization_demo\models\example\my_first_dbt_model.sql
+[0m11:02:25.977570 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '573091ce-b690-44d8-9c18-52e7d21bd271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017684194950>]}
+[0m11:02:25.977570 [error] [Thread-1 (]: 1 of 6 ERROR creating sql table model dbt_semantic_layer_demo.my_first_dbt_model  [[31mERROR[0m in 0.68s]
+[0m11:02:25.977570 [debug] [Thread-1 (]: Finished running node model.dbt_optimization_demo.my_first_dbt_model
+[0m11:02:25.977570 [debug] [Thread-4 (]: Marking all children of 'model.dbt_optimization_demo.my_first_dbt_model' to be skipped because of status 'error'.  Reason: Database Error in model my_first_dbt_model (models\example\my_first_dbt_model.sql)
+  Not found: Dataset propellingtech-demo-customers:dbt_semantic_layer_demo was not found in location EU
+  compiled code at target\run\dbt_optimization_demo\models\example\my_first_dbt_model.sql.
+[0m11:02:25.987172 [debug] [Thread-1 (]: Began running node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m11:02:25.987172 [info ] [Thread-1 (]: 2 of 6 SKIP test not_null_my_first_dbt_model_id ................................ [[33mSKIP[0m]
+[0m11:02:25.989184 [debug] [Thread-1 (]: Finished running node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m11:02:25.989184 [debug] [Thread-1 (]: Began running node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m11:02:25.993296 [debug] [Thread-4 (]: Marking all children of 'test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710' to be skipped because of status 'skipped'. 
+[0m11:02:25.994333 [info ] [Thread-1 (]: 3 of 6 SKIP test unique_my_first_dbt_model_id .................................. [[33mSKIP[0m]
+[0m11:02:25.995959 [debug] [Thread-1 (]: Finished running node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m11:02:25.995959 [debug] [Thread-4 (]: Marking all children of 'test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321' to be skipped because of status 'skipped'. 
+[0m11:02:26.000826 [debug] [Thread-1 (]: Began running node model.dbt_optimization_demo.my_second_dbt_model
+[0m11:02:26.000826 [info ] [Thread-1 (]: 4 of 6 SKIP relation dbt_semantic_layer_demo.my_second_dbt_model ............... [[33mSKIP[0m]
+[0m11:02:26.000826 [debug] [Thread-1 (]: Finished running node model.dbt_optimization_demo.my_second_dbt_model
+[0m11:02:26.000826 [debug] [Thread-4 (]: Marking all children of 'model.dbt_optimization_demo.my_second_dbt_model' to be skipped because of status 'skipped'. 
+[0m11:02:26.009033 [debug] [Thread-1 (]: Began running node test.dbt_optimization_demo.not_null_my_second_dbt_model_id.151b76d778
+[0m11:02:26.009033 [info ] [Thread-1 (]: 5 of 6 SKIP test not_null_my_second_dbt_model_id ............................... [[33mSKIP[0m]
+[0m11:02:26.009033 [debug] [Thread-1 (]: Finished running node test.dbt_optimization_demo.not_null_my_second_dbt_model_id.151b76d778
+[0m11:02:26.015987 [debug] [Thread-1 (]: Began running node test.dbt_optimization_demo.unique_my_second_dbt_model_id.57a0f8c493
+[0m11:02:26.017648 [debug] [Thread-4 (]: Marking all children of 'test.dbt_optimization_demo.not_null_my_second_dbt_model_id.151b76d778' to be skipped because of status 'skipped'. 
+[0m11:02:26.015987 [info ] [Thread-1 (]: 6 of 6 SKIP test unique_my_second_dbt_model_id ................................. [[33mSKIP[0m]
+[0m11:02:26.017648 [debug] [Thread-1 (]: Finished running node test.dbt_optimization_demo.unique_my_second_dbt_model_id.57a0f8c493
+[0m11:02:26.017648 [debug] [Thread-4 (]: Marking all children of 'test.dbt_optimization_demo.unique_my_second_dbt_model_id.57a0f8c493' to be skipped because of status 'skipped'. 
+[0m11:02:26.017648 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:02:26.025723 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:02:26.025723 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers' was properly closed.
+[0m11:02:26.025723 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m11:02:26.025723 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.my_first_dbt_model' was properly closed.
+[0m11:02:26.025723 [info ] [MainThread]: 
+[0m11:02:26.025723 [info ] [MainThread]: Finished running 1 table model, 4 data tests, 1 view model in 0 hours 0 minutes and 4.74 seconds (4.74s).
+[0m11:02:26.033949 [debug] [MainThread]: Command end result
+[0m11:02:26.076120 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m11:02:26.076120 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m11:02:26.085699 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\run_results.json
+[0m11:02:26.085699 [info ] [MainThread]: 
+[0m11:02:26.091043 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m11:02:26.091043 [info ] [MainThread]: 
+[0m11:02:26.091043 [error] [MainThread]:   Database Error in model my_first_dbt_model (models\example\my_first_dbt_model.sql)
+  Not found: Dataset propellingtech-demo-customers:dbt_semantic_layer_demo was not found in location EU
+  compiled code at target\run\dbt_optimization_demo\models\example\my_first_dbt_model.sql
+[0m11:02:26.091043 [info ] [MainThread]: 
+[0m11:02:26.091043 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=5 TOTAL=6
+[0m11:02:26.096307 [debug] [MainThread]: Command `dbt build` failed at 11:02:26.095915 after 7.21 seconds
+[0m11:02:26.096307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176E4C87F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176E4CE8F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000176E4BAF350>]}
+[0m11:02:26.096307 [debug] [MainThread]: Flushing usage events
+[0m11:02:26.570678 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:10:34.592052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC47F8C150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC47F8F650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC47F8FD50>]}
+
+
+============================== 11:10:34.593812 | 82431b1f-0259-46ca-9bfd-9927f77874fc ==============================
+[0m11:10:34.593812 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:10:34.601868 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt build', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:10:34.604864 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'dbt_optimization_demo'
+[0m11:10:34.604864 [debug] [MainThread]: Command `dbt build` failed at 11:10:34.604864 after 0.20 seconds
+[0m11:10:34.612013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC430EDED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC47FEF2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC47FEF210>]}
+[0m11:10:34.613166 [debug] [MainThread]: Flushing usage events
+[0m11:10:35.075953 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:11:04.540013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A119F8D350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A119F8D490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A119F8C150>]}
+
+
+============================== 11:11:04.540013 | 0051278a-bce0-46c6-86b3-453949833b88 ==============================
+[0m11:11:04.540013 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:11:04.548049 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt build', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:11:04.548049 [info ] [MainThread]: target not specified in profile 'my-bigquery-db', using 'default'
+[0m11:11:04.548049 [error] [MainThread]: Encountered an error:
+Runtime Error
+  outputs not specified in profile 'my-bigquery-db'
+[0m11:11:04.548049 [debug] [MainThread]: Command `dbt build` failed at 11:11:04.548049 after 0.17 seconds
+[0m11:11:04.556205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A119C863D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A119FE1890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A119FE2350>]}
+[0m11:11:04.557113 [debug] [MainThread]: Flushing usage events
+[0m11:11:05.013696 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:11:24.434192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFE0E1190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFE0C8390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFE0C8590>]}
+
+
+============================== 11:11:24.435707 | 2ec79d82-da2c-4e3b-955d-671e04a3de71 ==============================
+[0m11:11:24.435707 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:11:24.443721 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m11:11:24.444975 [error] [MainThread]: Encountered an error:
+Runtime Error
+  
+  dbt encountered an error while trying to read your profiles.yml file.
+  
+  Profile my-bigquery-db in profiles.yml is empty
+  
+[0m11:11:24.444975 [debug] [MainThread]: Command `dbt build` failed at 11:11:24.444975 after 0.18 seconds
+[0m11:11:24.444975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFE08BA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFE0EF5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFCEE9E90>]}
+[0m11:11:24.444975 [debug] [MainThread]: Flushing usage events
+[0m11:11:24.912805 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:13:44.563165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160B2189410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160B06BDDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160B0FE55D0>]}
+
+
+============================== 11:13:44.567547 | bf476b95-4c2a-404c-870c-f7e87943455f ==============================
+[0m11:13:44.567547 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:13:44.567547 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt build', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:13:44.567547 [error] [MainThread]: Encountered an error:
+Runtime Error
+  
+  dbt encountered an error while trying to read your profiles.yml file.
+  
+  Profile my-bigquery-db in profiles.yml is empty
+  
+[0m11:13:44.567547 [debug] [MainThread]: Command `dbt build` failed at 11:13:44.567547 after 0.14 seconds
+[0m11:13:44.575708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160AC41EC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160B2199750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000160B2183F10>]}
+[0m11:13:44.575708 [debug] [MainThread]: Flushing usage events
+[0m11:13:45.038951 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:14:28.337369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F554BE2210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F554BE1F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F554BE2650>]}
+
+
+============================== 11:14:28.341183 | b58533b2-1d39-4694-9d8f-6bd86903f234 ==============================
+[0m11:14:28.341183 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:14:28.342250 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt build', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:14:29.561003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b58533b2-1d39-4694-9d8f-6bd86903f234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F572E34C90>]}
+[0m11:14:29.706499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b58533b2-1d39-4694-9d8f-6bd86903f234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F550B0DE90>]}
+[0m11:14:29.711065 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:14:30.200114 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m11:14:30.281384 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m11:14:30.289786 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m11:14:30.290795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b58533b2-1d39-4694-9d8f-6bd86903f234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5546E1BD0>]}
+[0m11:14:31.461348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b58533b2-1d39-4694-9d8f-6bd86903f234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F57443AA10>]}
+[0m11:14:31.550015 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m11:14:31.556313 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m11:14:31.593171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b58533b2-1d39-4694-9d8f-6bd86903f234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F57476FE10>]}
+[0m11:14:31.593171 [info ] [MainThread]: Found 2 models, 4 data tests, 491 macros
+[0m11:14:31.598870 [info ] [MainThread]: 
+[0m11:14:31.598870 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:14:31.601297 [info ] [MainThread]: 
+[0m11:14:31.601297 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:14:31.609649 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m11:14:31.609649 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:14:34.272315 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo'
+[0m11:14:34.274814 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:14:34.537636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b58533b2-1d39-4694-9d8f-6bd86903f234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5744FEA50>]}
+[0m11:14:34.537636 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:14:34.556595 [debug] [Thread-1 (]: Began running node model.dbt_optimization_demo.my_first_dbt_model
+[0m11:14:34.558613 [info ] [Thread-1 (]: 1 of 6 START sql table model dbt_semantic_layer_demo.my_first_dbt_model ........ [RUN]
+[0m11:14:34.560374 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.my_first_dbt_model'
+[0m11:14:34.560374 [debug] [Thread-1 (]: Began compiling node model.dbt_optimization_demo.my_first_dbt_model
+[0m11:14:34.576974 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_optimization_demo.my_first_dbt_model"
+[0m11:14:34.585248 [debug] [Thread-1 (]: Began executing node model.dbt_optimization_demo.my_first_dbt_model
+[0m11:14:34.652048 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_optimization_demo.my_first_dbt_model"
+[0m11:14:34.652048 [debug] [Thread-1 (]: On model.dbt_optimization_demo.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m11:14:34.660596 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:14:35.258766 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:f6297862-ffa1-43f0-a0d4-900e414b0a69&page=queryresults
+[0m11:14:44.816335 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b58533b2-1d39-4694-9d8f-6bd86903f234', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5747ABB50>]}
+[0m11:14:44.816335 [info ] [Thread-1 (]: 1 of 6 OK created sql table model dbt_semantic_layer_demo.my_first_dbt_model ... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 10.25s]
+[0m11:14:44.816335 [debug] [Thread-1 (]: Finished running node model.dbt_optimization_demo.my_first_dbt_model
+[0m11:14:44.824364 [debug] [Thread-3 (]: Began running node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m11:14:44.824364 [debug] [Thread-4 (]: Began running node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m11:14:44.824364 [info ] [Thread-3 (]: 2 of 6 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m11:14:44.824364 [info ] [Thread-4 (]: 3 of 6 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m11:14:44.834486 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321'
+[0m11:14:44.832470 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710'
+[0m11:14:44.834486 [debug] [Thread-4 (]: Began compiling node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m11:14:44.836499 [debug] [Thread-3 (]: Began compiling node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m11:14:44.857886 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321"
+[0m11:14:44.878129 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m11:14:44.882062 [debug] [Thread-3 (]: Began executing node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m11:14:44.897911 [debug] [Thread-4 (]: Began executing node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m11:14:44.911880 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m11:14:44.914546 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321"
+[0m11:14:44.922690 [debug] [Thread-3 (]: On test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`my_first_dbt_model`
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:14:44.922690 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:14:44.922690 [debug] [Thread-4 (]: On test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`my_first_dbt_model`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:14:44.922690 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:14:45.487825 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:44d06de9-af17-4400-a2d2-78f535cbd3dc&page=queryresults
+[0m11:14:45.487825 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:c9487575-e8f5-410c-8461-7e2640d58a1a&page=queryresults
+[0m11:14:46.006402 [info ] [Thread-4 (]: 3 of 6 PASS unique_my_first_dbt_model_id ....................................... [[32mPASS[0m in 1.17s]
+[0m11:14:46.011507 [debug] [Thread-4 (]: Finished running node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m11:14:46.009934 [error] [Thread-3 (]: 2 of 6 FAIL 1 not_null_my_first_dbt_model_id ................................... [[31mFAIL 1[0m in 1.18s]
+[0m11:14:46.013518 [debug] [Thread-3 (]: Finished running node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m11:14:46.016047 [debug] [Thread-7 (]: Marking all children of 'test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710' to be skipped because of status 'fail'.  Reason: Got 1 result, configured to fail if != 0.
+[0m11:14:46.020074 [debug] [Thread-1 (]: Began running node model.dbt_optimization_demo.my_second_dbt_model
+[0m11:14:46.020874 [info ] [Thread-1 (]: 4 of 6 SKIP relation dbt_semantic_layer_demo.my_second_dbt_model ............... [[33mSKIP[0m]
+[0m11:14:46.024116 [debug] [Thread-1 (]: Finished running node model.dbt_optimization_demo.my_second_dbt_model
+[0m11:14:46.026131 [debug] [Thread-7 (]: Marking all children of 'model.dbt_optimization_demo.my_second_dbt_model' to be skipped because of status 'skipped'. 
+[0m11:14:46.029109 [debug] [Thread-4 (]: Began running node test.dbt_optimization_demo.not_null_my_second_dbt_model_id.151b76d778
+[0m11:14:46.031923 [debug] [Thread-3 (]: Began running node test.dbt_optimization_demo.unique_my_second_dbt_model_id.57a0f8c493
+[0m11:14:46.031923 [info ] [Thread-4 (]: 5 of 6 SKIP test not_null_my_second_dbt_model_id ............................... [[33mSKIP[0m]
+[0m11:14:46.034589 [debug] [Thread-4 (]: Finished running node test.dbt_optimization_demo.not_null_my_second_dbt_model_id.151b76d778
+[0m11:14:46.034589 [debug] [Thread-7 (]: Marking all children of 'test.dbt_optimization_demo.not_null_my_second_dbt_model_id.151b76d778' to be skipped because of status 'skipped'. 
+[0m11:14:46.034589 [info ] [Thread-3 (]: 6 of 6 SKIP test unique_my_second_dbt_model_id ................................. [[33mSKIP[0m]
+[0m11:14:46.039237 [debug] [Thread-3 (]: Finished running node test.dbt_optimization_demo.unique_my_second_dbt_model_id.57a0f8c493
+[0m11:14:46.039237 [debug] [Thread-7 (]: Marking all children of 'test.dbt_optimization_demo.unique_my_second_dbt_model_id.57a0f8c493' to be skipped because of status 'skipped'. 
+[0m11:14:46.044037 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:14:46.046053 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:14:46.046053 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers' was properly closed.
+[0m11:14:46.048072 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m11:14:46.048072 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.my_first_dbt_model' was properly closed.
+[0m11:14:46.048072 [debug] [MainThread]: Connection 'test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710' was properly closed.
+[0m11:14:46.051098 [debug] [MainThread]: Connection 'test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321' was properly closed.
+[0m11:14:46.052349 [info ] [MainThread]: 
+[0m11:14:46.052349 [info ] [MainThread]: Finished running 1 table model, 4 data tests, 1 view model in 0 hours 0 minutes and 14.45 seconds (14.45s).
+[0m11:14:46.056309 [debug] [MainThread]: Command end result
+[0m11:14:46.108364 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m11:14:46.113199 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m11:14:46.124756 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\run_results.json
+[0m11:14:46.125947 [info ] [MainThread]: 
+[0m11:14:46.128025 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m11:14:46.128025 [info ] [MainThread]: 
+[0m11:14:46.128025 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models\example\schema.yml)[0m
+[0m11:14:46.133897 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m11:14:46.135340 [info ] [MainThread]: 
+[0m11:14:46.137359 [info ] [MainThread]:   compiled code at target\compiled\dbt_optimization_demo\models\example\schema.yml\not_null_my_first_dbt_model_id.sql
+[0m11:14:46.137359 [info ] [MainThread]: 
+[0m11:14:46.137359 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=3 TOTAL=6
+[0m11:14:46.141459 [debug] [MainThread]: Command `dbt build` failed at 11:14:46.141459 after 17.93 seconds
+[0m11:14:46.141459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F54FD5EC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F54FD5DF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F554B87D10>]}
+[0m11:14:46.141459 [debug] [MainThread]: Flushing usage events
+[0m11:14:46.596403 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:43:51.153777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD3728DE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD3728FB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD3728DC50>]}
+
+
+============================== 11:43:51.166150 | ff19c424-800e-4b06-8229-a88d91bf40f4 ==============================
+[0m11:43:51.166150 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:43:51.169340 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:43:51.216051 [info ] [MainThread]: dbt version: 1.9.4
+[0m11:43:51.218727 [info ] [MainThread]: python version: 3.11.9
+[0m11:43:51.218727 [info ] [MainThread]: python path: C:\Users\ManeChacon\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+[0m11:43:51.218727 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m11:43:52.323873 [info ] [MainThread]: Using profiles dir at C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo
+[0m11:43:52.323873 [info ] [MainThread]: Using profiles.yml file at C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\profiles.yml
+[0m11:43:52.334441 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\dbt_project.yml
+[0m11:43:52.336493 [info ] [MainThread]: adapter type: bigquery
+[0m11:43:52.337644 [info ] [MainThread]: adapter version: 1.9.1
+[0m11:43:52.525125 [info ] [MainThread]: Configuration:
+[0m11:43:52.525125 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:43:52.541051 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:43:52.541051 [info ] [MainThread]: Required dependencies:
+[0m11:43:52.541051 [debug] [MainThread]: Executing "git --help"
+[0m11:43:52.588014 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:43:52.588014 [debug] [MainThread]: STDERR: "b''"
+[0m11:43:52.588014 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:43:52.588014 [info ] [MainThread]: Connection:
+[0m11:43:52.588014 [info ] [MainThread]:   method: oauth
+[0m11:43:52.588014 [info ] [MainThread]:   database: propellingtech-demo-customers
+[0m11:43:52.588014 [info ] [MainThread]:   execution_project: propellingtech-demo-customers
+[0m11:43:52.588014 [info ] [MainThread]:   schema: dbt_semantic_layer_demo
+[0m11:43:52.588014 [info ] [MainThread]:   location: europe-west1
+[0m11:43:52.588014 [info ] [MainThread]:   priority: None
+[0m11:43:52.588014 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m11:43:52.588014 [info ] [MainThread]:   impersonate_service_account: None
+[0m11:43:52.588014 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m11:43:52.598475 [info ] [MainThread]:   job_retries: 1
+[0m11:43:52.599260 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m11:43:52.599260 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m11:43:52.599260 [info ] [MainThread]:   timeout_seconds: None
+[0m11:43:52.599260 [info ] [MainThread]:   client_id: None
+[0m11:43:52.599260 [info ] [MainThread]:   token_uri: None
+[0m11:43:52.605064 [info ] [MainThread]:   dataproc_region: None
+[0m11:43:52.605064 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m11:43:52.605064 [info ] [MainThread]:   gcs_bucket: None
+[0m11:43:52.605064 [info ] [MainThread]:   dataproc_batch: None
+[0m11:43:52.605064 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m11:43:53.051398 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m11:43:53.051398 [debug] [MainThread]: On debug: select 1 as id
+[0m11:43:53.051398 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:43:55.733359 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:d1e56670-b7dd-41e9-abd5-17b310a345da&page=queryresults
+[0m11:43:56.242651 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:43:56.242651 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:43:56.252213 [debug] [MainThread]: Command `dbt debug` succeeded at 11:43:56.252213 after 5.25 seconds
+[0m11:43:56.252213 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:43:56.252213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD35F863D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD370E9E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD53E9D390>]}
+[0m11:43:56.252213 [debug] [MainThread]: Flushing usage events
+[0m11:43:56.702393 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:49:37.810349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B48B610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B48BB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B48B690>]}
+
+
+============================== 15:49:37.815349 | 21b29129-849a-4339-b721-042a9ff1d886 ==============================
+[0m15:49:37.815349 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:49:37.816347 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'c:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'log_path': 'c:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:49:37.998478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '21b29129-849a-4339-b721-042a9ff1d886', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B4DD050>]}
+[0m15:49:38.266910 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m15:49:38.271908 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m15:49:38.274909 [debug] [MainThread]: Command `cli deps` succeeded at 15:49:38.274909 after 0.60 seconds
+[0m15:49:38.275911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B494B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B507BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420B507A10>]}
+[0m15:49:38.276911 [debug] [MainThread]: Flushing usage events
+[0m15:49:38.810379 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:48:02.336094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFFCBFB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFFCBCDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFFCBCB90>]}
+
+
+============================== 20:48:02.341241 | 778ab81e-9c08-43ba-8e0f-a52fe3b93563 ==============================
+[0m20:48:02.341241 [info ] [MainThread]: Running with dbt=1.9.4
+[0m20:48:02.342993 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt build', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:48:03.668139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '778ab81e-9c08-43ba-8e0f-a52fe3b93563', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E01DE16FD0>]}
+[0m20:48:03.812597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '778ab81e-9c08-43ba-8e0f-a52fe3b93563', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFBC59D90>]}
+[0m20:48:03.812597 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m20:48:04.576285 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m20:48:04.822910 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:48:04.822910 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:48:04.860018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '778ab81e-9c08-43ba-8e0f-a52fe3b93563', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E01F37A910>]}
+[0m20:48:04.925468 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m20:48:04.976193 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m20:48:05.196408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '778ab81e-9c08-43ba-8e0f-a52fe3b93563', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E01F5D3810>]}
+[0m20:48:05.196408 [info ] [MainThread]: Found 2 models, 4 data tests, 491 macros
+[0m20:48:05.204153 [info ] [MainThread]: 
+[0m20:48:05.206161 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:48:05.206161 [info ] [MainThread]: 
+[0m20:48:05.209545 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:48:05.218373 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m20:48:05.221212 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:48:11.236145 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo'
+[0m20:48:11.236145 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:48:11.586658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '778ab81e-9c08-43ba-8e0f-a52fe3b93563', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E01DF87C50>]}
+[0m20:48:11.586658 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:48:11.614536 [debug] [Thread-1 (]: Began running node model.dbt_optimization_demo.my_first_dbt_model
+[0m20:48:11.616546 [info ] [Thread-1 (]: 1 of 6 START sql table model dbt_semantic_layer_demo.my_first_dbt_model ........ [RUN]
+[0m20:48:11.616546 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.my_first_dbt_model'
+[0m20:48:11.616546 [debug] [Thread-1 (]: Began compiling node model.dbt_optimization_demo.my_first_dbt_model
+[0m20:48:11.644489 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_optimization_demo.my_first_dbt_model"
+[0m20:48:11.648078 [debug] [Thread-1 (]: Began executing node model.dbt_optimization_demo.my_first_dbt_model
+[0m20:48:11.679017 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:48:12.221267 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_optimization_demo.my_first_dbt_model"
+[0m20:48:12.221267 [debug] [Thread-1 (]: On model.dbt_optimization_demo.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m20:48:12.770515 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:bd327e7a-cf1e-4555-962a-152f76ccad04&page=queryresults
+[0m20:48:23.706297 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '778ab81e-9c08-43ba-8e0f-a52fe3b93563', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E01F5EA1D0>]}
+[0m20:48:23.706297 [info ] [Thread-1 (]: 1 of 6 OK created sql table model dbt_semantic_layer_demo.my_first_dbt_model ... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 12.06s]
+[0m20:48:23.706297 [debug] [Thread-1 (]: Finished running node model.dbt_optimization_demo.my_first_dbt_model
+[0m20:48:23.716259 [debug] [Thread-3 (]: Began running node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m20:48:23.718015 [debug] [Thread-4 (]: Began running node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m20:48:23.718015 [info ] [Thread-3 (]: 2 of 6 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m20:48:23.724747 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710'
+[0m20:48:23.720823 [info ] [Thread-4 (]: 3 of 6 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m20:48:23.727020 [debug] [Thread-3 (]: Began compiling node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m20:48:23.728049 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321'
+[0m20:48:23.756088 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m20:48:23.758774 [debug] [Thread-4 (]: Began compiling node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m20:48:23.776226 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321"
+[0m20:48:23.778694 [debug] [Thread-3 (]: Began executing node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m20:48:23.807568 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m20:48:23.807568 [debug] [Thread-4 (]: Began executing node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m20:48:23.817873 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321"
+[0m20:48:23.817873 [debug] [Thread-3 (]: On test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`my_first_dbt_model`
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:48:23.817873 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:48:23.823066 [debug] [Thread-4 (]: On test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`my_first_dbt_model`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:48:23.826109 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:48:24.336548 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:8b14775e-a39d-4ac6-aac8-199715161a4a&page=queryresults
+[0m20:48:24.336548 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:c505440d-8071-4744-b739-2d74163a577f&page=queryresults
+[0m20:48:24.710464 [info ] [Thread-4 (]: 3 of 6 PASS unique_my_first_dbt_model_id ....................................... [[32mPASS[0m in 0.98s]
+[0m20:48:24.714628 [debug] [Thread-4 (]: Finished running node test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321
+[0m20:48:24.721749 [error] [Thread-3 (]: 2 of 6 FAIL 1 not_null_my_first_dbt_model_id ................................... [[31mFAIL 1[0m in 1.00s]
+[0m20:48:24.723918 [debug] [Thread-3 (]: Finished running node test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710
+[0m20:48:24.724935 [debug] [Thread-7 (]: Marking all children of 'test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710' to be skipped because of status 'fail'.  Reason: Got 1 result, configured to fail if != 0.
+[0m20:48:24.730393 [debug] [Thread-1 (]: Began running node model.dbt_optimization_demo.my_second_dbt_model
+[0m20:48:24.732380 [info ] [Thread-1 (]: 4 of 6 SKIP relation dbt_semantic_layer_demo.my_second_dbt_model ............... [[33mSKIP[0m]
+[0m20:48:24.733709 [debug] [Thread-1 (]: Finished running node model.dbt_optimization_demo.my_second_dbt_model
+[0m20:48:24.736195 [debug] [Thread-7 (]: Marking all children of 'model.dbt_optimization_demo.my_second_dbt_model' to be skipped because of status 'skipped'. 
+[0m20:48:24.738156 [debug] [Thread-4 (]: Began running node test.dbt_optimization_demo.not_null_my_second_dbt_model_id.151b76d778
+[0m20:48:24.739345 [debug] [Thread-3 (]: Began running node test.dbt_optimization_demo.unique_my_second_dbt_model_id.57a0f8c493
+[0m20:48:24.739345 [info ] [Thread-4 (]: 5 of 6 SKIP test not_null_my_second_dbt_model_id ............................... [[33mSKIP[0m]
+[0m20:48:24.745013 [debug] [Thread-4 (]: Finished running node test.dbt_optimization_demo.not_null_my_second_dbt_model_id.151b76d778
+[0m20:48:24.743765 [info ] [Thread-3 (]: 6 of 6 SKIP test unique_my_second_dbt_model_id ................................. [[33mSKIP[0m]
+[0m20:48:24.746536 [debug] [Thread-7 (]: Marking all children of 'test.dbt_optimization_demo.not_null_my_second_dbt_model_id.151b76d778' to be skipped because of status 'skipped'. 
+[0m20:48:24.746536 [debug] [Thread-3 (]: Finished running node test.dbt_optimization_demo.unique_my_second_dbt_model_id.57a0f8c493
+[0m20:48:24.746536 [debug] [Thread-7 (]: Marking all children of 'test.dbt_optimization_demo.unique_my_second_dbt_model_id.57a0f8c493' to be skipped because of status 'skipped'. 
+[0m20:48:24.751196 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:48:24.754511 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:48:24.756524 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers' was properly closed.
+[0m20:48:24.756524 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m20:48:24.756524 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.my_first_dbt_model' was properly closed.
+[0m20:48:24.756524 [debug] [MainThread]: Connection 'test.dbt_optimization_demo.not_null_my_first_dbt_model_id.5fb22c2710' was properly closed.
+[0m20:48:24.756524 [debug] [MainThread]: Connection 'test.dbt_optimization_demo.unique_my_first_dbt_model_id.16e066b321' was properly closed.
+[0m20:48:24.760659 [info ] [MainThread]: 
+[0m20:48:24.760659 [info ] [MainThread]: Finished running 1 table model, 4 data tests, 1 view model in 0 hours 0 minutes and 19.55 seconds (19.55s).
+[0m20:48:24.763686 [debug] [MainThread]: Command end result
+[0m20:48:24.830441 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m20:48:24.838651 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m20:48:24.851896 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\run_results.json
+[0m20:48:24.851896 [info ] [MainThread]: 
+[0m20:48:24.851896 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m20:48:24.851896 [info ] [MainThread]: 
+[0m20:48:24.856207 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models\example\schema.yml)[0m
+[0m20:48:24.856207 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m20:48:24.856207 [info ] [MainThread]: 
+[0m20:48:24.856207 [info ] [MainThread]:   compiled code at target\compiled\dbt_optimization_demo\models\example\schema.yml\not_null_my_first_dbt_model_id.sql
+[0m20:48:24.856207 [info ] [MainThread]: 
+[0m20:48:24.862379 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=3 TOTAL=6
+[0m20:48:24.862379 [debug] [MainThread]: Command `dbt build` failed at 20:48:24.862379 after 22.63 seconds
+[0m20:48:24.862379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFFD1EF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFFD1F5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFAEAEB10>]}
+[0m20:48:24.866332 [debug] [MainThread]: Flushing usage events
+[0m20:48:25.246516 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:19:01.679123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429888B350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024298889610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024298888E90>]}
+
+
+============================== 21:19:01.684244 | 48359458-b570-4d5c-a16d-2e62e9ca1d94 ==============================
+[0m21:19:01.684244 [info ] [MainThread]: Running with dbt=1.9.4
+[0m21:19:01.684244 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m21:19:02.970328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '48359458-b570-4d5c-a16d-2e62e9ca1d94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242B5A47F50>]}
+[0m21:19:03.112746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '48359458-b570-4d5c-a16d-2e62e9ca1d94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002429378BC90>]}
+[0m21:19:03.116587 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m21:19:03.570207 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m21:19:03.719699 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 2 files added, 0 files changed.
+[0m21:19:03.720845 [debug] [MainThread]: Partial parsing: added file: dbt_optimization_demo://models\countfooddrinkorders.sql
+[0m21:19:03.722217 [debug] [MainThread]: Partial parsing: added file: dbt_optimization_demo://models\totalordercustomername.sql
+[0m21:19:03.722798 [debug] [MainThread]: Partial parsing: deleted file: dbt_optimization_demo://models\model3.sql
+[0m21:19:03.725020 [debug] [MainThread]: Partial parsing: deleted file: dbt_optimization_demo://models\model2.sql
+[0m21:19:03.970285 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_optimization_demo.example
+[0m21:19:03.980350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '48359458-b570-4d5c-a16d-2e62e9ca1d94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242B5A98A90>]}
+[0m21:19:04.031309 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m21:19:04.039347 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m21:19:04.071804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '48359458-b570-4d5c-a16d-2e62e9ca1d94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242B71F6290>]}
+[0m21:19:04.080149 [info ] [MainThread]: Found 3 models, 491 macros
+[0m21:19:04.081155 [info ] [MainThread]: 
+[0m21:19:04.081155 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:19:04.081155 [info ] [MainThread]: 
+[0m21:19:04.081155 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:19:04.092330 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m21:19:04.094424 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:19:06.500191 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo'
+[0m21:19:06.503194 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:19:06.812175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48359458-b570-4d5c-a16d-2e62e9ca1d94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242B5FA7350>]}
+[0m21:19:06.812175 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:19:06.830709 [debug] [Thread-1 (]: Began running node model.dbt_optimization_demo.customerswithorders
+[0m21:19:06.830709 [debug] [Thread-2 (]: Began running node model.dbt_optimization_demo.totalordercustomername
+[0m21:19:06.837853 [info ] [Thread-1 (]: 1 of 2 START sql view model dbt_semantic_layer_demo.customerswithorders ........ [RUN]
+[0m21:19:06.840150 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.customerswithorders'
+[0m21:19:06.843573 [debug] [Thread-1 (]: Began compiling node model.dbt_optimization_demo.customerswithorders
+[0m21:19:06.840150 [info ] [Thread-2 (]: 2 of 2 START sql view model dbt_semantic_layer_demo.totalordercustomername ..... [RUN]
+[0m21:19:06.852168 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_optimization_demo.customerswithorders"
+[0m21:19:06.861520 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.totalordercustomername'
+[0m21:19:06.864929 [debug] [Thread-2 (]: Began compiling node model.dbt_optimization_demo.totalordercustomername
+[0m21:19:06.870611 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_optimization_demo.totalordercustomername"
+[0m21:19:06.872890 [debug] [Thread-1 (]: Began executing node model.dbt_optimization_demo.customerswithorders
+[0m21:19:06.877711 [debug] [Thread-2 (]: Began executing node model.dbt_optimization_demo.totalordercustomername
+[0m21:19:06.932513 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_optimization_demo.customerswithorders"
+[0m21:19:06.945294 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_optimization_demo.totalordercustomername"
+[0m21:19:06.945850 [debug] [Thread-1 (]: On model.dbt_optimization_demo.customerswithorders: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.customerswithorders"} */
+
+
+  create or replace view `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`customerswithorders`
+  OPTIONS()
+  as with orders as (
+    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders
+),
+customers as (
+    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers
+),
+orders_with_customer as (
+    select
+        o.order_id,
+        o.customer_id,
+        (select c.name from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers c where c.customer_id = o.customer_id) as customer_name,
+        o.order_total,
+        o.ordered_at
+    from orders o
+)
+select * from orders_with_customer;;
+
+
+[0m21:19:06.949002 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:19:06.949002 [debug] [Thread-2 (]: On model.dbt_optimization_demo.totalordercustomername: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.totalordercustomername"} */
+
+
+  create or replace view `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`totalordercustomername`
+  OPTIONS()
+  as SELECT
+  (
+    SELECT
+      c.name
+    FROM
+      `propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers` c
+    WHERE
+      c.customer_id = o.customer_id
+  ) AS customer_name,
+  SUM(o.order_total) AS total_spent
+FROM
+  (
+    SELECT
+      *
+    FROM
+      `propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders`
+  ) AS o
+GROUP BY
+  customer_name
+ORDER BY
+  total_spent DESC;;
+
+
+[0m21:19:06.951591 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:19:07.310623 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:7098f1bb-53b3-499a-87b6-5658ef0a3afd&page=queryresults
+[0m21:19:07.310623 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:69d5909c-16ca-4f85-aef6-fca1d30c462c&page=queryresults
+[0m21:19:07.320198 [error] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:7098f1bb-53b3-499a-87b6-5658ef0a3afd&page=queryresults
+[0m21:19:07.322878 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:69d5909c-16ca-4f85-aef6-fca1d30c462c&page=queryresults
+[0m21:19:07.645299 [debug] [Thread-1 (]: Database Error in model customerswithorders (models\customerswithorders.sql)
+  Syntax error: Unexpected ";" at [21:36]
+  compiled code at target\run\dbt_optimization_demo\models\customerswithorders.sql
+[0m21:19:07.645299 [debug] [Thread-2 (]: Database Error in model totalordercustomername (models\totalordercustomername.sql)
+  Syntax error: Unexpected ";" at [26:20]
+  compiled code at target\run\dbt_optimization_demo\models\totalordercustomername.sql
+[0m21:19:07.652535 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '48359458-b570-4d5c-a16d-2e62e9ca1d94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242B5FA2710>]}
+[0m21:19:07.652535 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '48359458-b570-4d5c-a16d-2e62e9ca1d94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242B5F78D90>]}
+[0m21:19:07.652535 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model dbt_semantic_layer_demo.customerswithorders  [[31mERROR[0m in 0.81s]
+[0m21:19:07.660377 [debug] [Thread-1 (]: Finished running node model.dbt_optimization_demo.customerswithorders
+[0m21:19:07.660377 [error] [Thread-2 (]: 2 of 2 ERROR creating sql view model dbt_semantic_layer_demo.totalordercustomername  [[31mERROR[0m in 0.79s]
+[0m21:19:07.660377 [debug] [Thread-7 (]: Marking all children of 'model.dbt_optimization_demo.customerswithorders' to be skipped because of status 'error'.  Reason: Database Error in model customerswithorders (models\customerswithorders.sql)
+  Syntax error: Unexpected ";" at [21:36]
+  compiled code at target\run\dbt_optimization_demo\models\customerswithorders.sql.
+[0m21:19:07.660377 [debug] [Thread-2 (]: Finished running node model.dbt_optimization_demo.totalordercustomername
+[0m21:19:07.666445 [debug] [Thread-7 (]: Marking all children of 'model.dbt_optimization_demo.totalordercustomername' to be skipped because of status 'error'.  Reason: Database Error in model totalordercustomername (models\totalordercustomername.sql)
+  Syntax error: Unexpected ";" at [26:20]
+  compiled code at target\run\dbt_optimization_demo\models\totalordercustomername.sql.
+[0m21:19:07.670563 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:19:07.678459 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:19:07.680476 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers' was properly closed.
+[0m21:19:07.680476 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m21:19:07.682618 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.customerswithorders' was properly closed.
+[0m21:19:07.682618 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.totalordercustomername' was properly closed.
+[0m21:19:07.685741 [info ] [MainThread]: 
+[0m21:19:07.687757 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 3.60 seconds (3.60s).
+[0m21:19:07.692301 [debug] [MainThread]: Command end result
+[0m21:19:07.740352 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m21:19:07.746546 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m21:19:07.759255 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\run_results.json
+[0m21:19:07.760269 [info ] [MainThread]: 
+[0m21:19:07.760831 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m21:19:07.760831 [info ] [MainThread]: 
+[0m21:19:07.765076 [error] [MainThread]:   Database Error in model customerswithorders (models\customerswithorders.sql)
+  Syntax error: Unexpected ";" at [21:36]
+  compiled code at target\run\dbt_optimization_demo\models\customerswithorders.sql
+[0m21:19:07.767092 [info ] [MainThread]: 
+[0m21:19:07.769368 [error] [MainThread]:   Database Error in model totalordercustomername (models\totalordercustomername.sql)
+  Syntax error: Unexpected ";" at [26:20]
+  compiled code at target\run\dbt_optimization_demo\models\totalordercustomername.sql
+[0m21:19:07.770555 [info ] [MainThread]: 
+[0m21:19:07.770555 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=0 TOTAL=2
+[0m21:19:07.773574 [debug] [MainThread]: Command `dbt build` failed at 21:19:07.773574 after 6.20 seconds
+[0m21:19:07.777061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242988ED590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242988EF790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242986E9DD0>]}
+[0m21:19:07.777061 [debug] [MainThread]: Flushing usage events
+[0m21:19:08.162310 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:19:46.900164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599C28B350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599C1AED50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599C288B90>]}
+
+
+============================== 21:19:46.913111 | 0a7fb804-3d94-44cc-ad4a-b2e52db725a8 ==============================
+[0m21:19:46.913111 [info ] [MainThread]: Running with dbt=1.9.4
+[0m21:19:46.913111 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt build', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:19:48.060020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0a7fb804-3d94-44cc-ad4a-b2e52db725a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159B8E5C450>]}
+[0m21:19:48.217950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0a7fb804-3d94-44cc-ad4a-b2e52db725a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159982BBB50>]}
+[0m21:19:48.219963 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m21:19:48.699940 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m21:19:48.840260 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:19:48.840260 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:19:48.849981 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_optimization_demo.example
+[0m21:19:48.886164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0a7fb804-3d94-44cc-ad4a-b2e52db725a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159BA91D850>]}
+[0m21:19:48.958786 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m21:19:48.962228 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m21:19:48.990030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0a7fb804-3d94-44cc-ad4a-b2e52db725a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159BAB9EC10>]}
+[0m21:19:48.998871 [info ] [MainThread]: Found 3 models, 491 macros
+[0m21:19:49.000936 [info ] [MainThread]: 
+[0m21:19:49.002956 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:19:49.002956 [info ] [MainThread]: 
+[0m21:19:49.004970 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:19:49.011643 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m21:19:49.013795 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:19:50.940237 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo'
+[0m21:19:50.943229 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:19:51.216295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0a7fb804-3d94-44cc-ad4a-b2e52db725a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159BAA3F210>]}
+[0m21:19:51.218820 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:19:51.230461 [debug] [Thread-1 (]: Began running node model.dbt_optimization_demo.countfooddrinkorders
+[0m21:19:51.232513 [debug] [Thread-2 (]: Began running node model.dbt_optimization_demo.customerswithorders
+[0m21:19:51.232513 [debug] [Thread-3 (]: Began running node model.dbt_optimization_demo.totalordercustomername
+[0m21:19:51.235312 [info ] [Thread-1 (]: 1 of 3 START sql view model dbt_semantic_layer_demo.countfooddrinkorders ....... [RUN]
+[0m21:19:51.237158 [info ] [Thread-2 (]: 2 of 3 START sql view model dbt_semantic_layer_demo.customerswithorders ........ [RUN]
+[0m21:19:51.241777 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.customerswithorders'
+[0m21:19:51.237158 [info ] [Thread-3 (]: 3 of 3 START sql view model dbt_semantic_layer_demo.totalordercustomername ..... [RUN]
+[0m21:19:51.241777 [debug] [Thread-2 (]: Began compiling node model.dbt_optimization_demo.customerswithorders
+[0m21:19:51.241777 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.countfooddrinkorders'
+[0m21:19:51.245561 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.totalordercustomername'
+[0m21:19:51.262488 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_optimization_demo.customerswithorders"
+[0m21:19:51.267937 [debug] [Thread-1 (]: Began compiling node model.dbt_optimization_demo.countfooddrinkorders
+[0m21:19:51.270454 [debug] [Thread-3 (]: Began compiling node model.dbt_optimization_demo.totalordercustomername
+[0m21:19:51.270454 [debug] [Thread-2 (]: Began executing node model.dbt_optimization_demo.customerswithorders
+[0m21:19:51.278179 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_optimization_demo.countfooddrinkorders"
+[0m21:19:51.280192 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_optimization_demo.totalordercustomername"
+[0m21:19:51.334748 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_optimization_demo.customerswithorders"
+[0m21:19:51.343185 [debug] [Thread-2 (]: On model.dbt_optimization_demo.customerswithorders: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.customerswithorders"} */
+
+
+  create or replace view `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`customerswithorders`
+  OPTIONS()
+  as with orders as (
+    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders
+),
+customers as (
+    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers
+),
+orders_with_customer as (
+    select
+        o.order_id,
+        o.customer_id,
+        (select c.name from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers c where c.customer_id = o.customer_id) as customer_name,
+        o.order_total,
+        o.ordered_at
+    from orders o
+)
+select * from orders_with_customer;
+
+
+[0m21:19:51.345324 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:19:51.350025 [debug] [Thread-3 (]: Began executing node model.dbt_optimization_demo.totalordercustomername
+[0m21:19:51.350025 [debug] [Thread-1 (]: Began executing node model.dbt_optimization_demo.countfooddrinkorders
+[0m21:19:51.350025 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_optimization_demo.totalordercustomername"
+[0m21:19:51.365675 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_optimization_demo.countfooddrinkorders"
+[0m21:19:51.370120 [debug] [Thread-3 (]: On model.dbt_optimization_demo.totalordercustomername: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.totalordercustomername"} */
+
+
+  create or replace view `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`totalordercustomername`
+  OPTIONS()
+  as SELECT
+  (
+    SELECT
+      c.name
+    FROM
+      `propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers` c
+    WHERE
+      c.customer_id = o.customer_id
+  ) AS customer_name,
+  SUM(o.order_total) AS total_spent
+FROM
+  (
+    SELECT
+      *
+    FROM
+      `propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders`
+  ) AS o
+GROUP BY
+  customer_name
+ORDER BY
+  total_spent DESC;
+
+
+[0m21:19:51.371118 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:19:51.373396 [debug] [Thread-1 (]: On model.dbt_optimization_demo.countfooddrinkorders: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.countfooddrinkorders"} */
+
+
+  create or replace view `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`countfooddrinkorders`
+  OPTIONS()
+  as WITH food_orders AS (
+  SELECT
+    c.name,
+    COUNT(oi.order_item_id) AS item_count
+  FROM
+    `propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers` c
+    JOIN `propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders` o ON c.customer_id = o.customer_id
+    JOIN `propellingtech-demo-customers.dbt_semantic_layer_demo.order_items` oi ON o.order_id = oi.order_id
+  WHERE
+    oi.is_food_item = 1
+  GROUP BY
+    c.name
+),
+drink_orders AS (
+  SELECT
+    c.name,
+    COUNT(oi.order_item_id) AS item_count
+  FROM
+    `propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers` c
+    JOIN `propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders` o ON c.customer_id = o.customer_id
+    JOIN `propellingtech-demo-customers.dbt_semantic_layer_demo.order_items` oi ON o.order_id = oi.order_id
+  WHERE
+    oi.is_drink_item = 1
+  GROUP BY
+    c.name
+)
+SELECT
+  name,
+  item_count,
+  'food' AS item_type
+FROM
+  food_orders
+UNION
+SELECT
+  name,
+  item_count,
+  'drink' AS item_type
+FROM
+  drink_orders;
+
+
+[0m21:19:51.377831 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:19:51.651967 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:b17416a2-d8a3-417a-958d-ade50a991a8a&page=queryresults
+[0m21:19:51.651967 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:b17416a2-d8a3-417a-958d-ade50a991a8a&page=queryresults
+[0m21:19:51.673414 [debug] [Thread-1 (]: Database Error in model countfooddrinkorders (models\countfooddrinkorders.sql)
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [39:1]
+  compiled code at target\run\dbt_optimization_demo\models\countfooddrinkorders.sql
+[0m21:19:51.673414 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0a7fb804-3d94-44cc-ad4a-b2e52db725a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159BAC2B210>]}
+[0m21:19:51.681142 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model dbt_semantic_layer_demo.countfooddrinkorders  [[31mERROR[0m in 0.43s]
+[0m21:19:51.684794 [debug] [Thread-1 (]: Finished running node model.dbt_optimization_demo.countfooddrinkorders
+[0m21:19:51.687550 [debug] [Thread-7 (]: Marking all children of 'model.dbt_optimization_demo.countfooddrinkorders' to be skipped because of status 'error'.  Reason: Database Error in model countfooddrinkorders (models\countfooddrinkorders.sql)
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [39:1]
+  compiled code at target\run\dbt_optimization_demo\models\countfooddrinkorders.sql.
+[0m21:19:51.760122 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:b815b2f2-5498-48bc-9605-2df7b8bc3e0a&page=queryresults
+[0m21:19:51.773896 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:ba881ee8-a5c0-4399-a303-f122ec0c5ca3&page=queryresults
+[0m21:19:52.290439 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0a7fb804-3d94-44cc-ad4a-b2e52db725a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159BABD6BD0>]}
+[0m21:19:52.290439 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0a7fb804-3d94-44cc-ad4a-b2e52db725a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159BAC305D0>]}
+[0m21:19:52.290439 [info ] [Thread-2 (]: 2 of 3 OK created sql view model dbt_semantic_layer_demo.customerswithorders ... [[32mCREATE VIEW (0 processed)[0m in 1.05s]
+[0m21:19:52.296898 [debug] [Thread-2 (]: Finished running node model.dbt_optimization_demo.customerswithorders
+[0m21:19:52.290439 [info ] [Thread-3 (]: 3 of 3 OK created sql view model dbt_semantic_layer_demo.totalordercustomername  [[32mCREATE VIEW (0 processed)[0m in 1.04s]
+[0m21:19:52.296898 [debug] [Thread-3 (]: Finished running node model.dbt_optimization_demo.totalordercustomername
+[0m21:19:52.300422 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:19:52.300422 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:19:52.300422 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers' was properly closed.
+[0m21:19:52.300422 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m21:19:52.300422 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.countfooddrinkorders' was properly closed.
+[0m21:19:52.300422 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.customerswithorders' was properly closed.
+[0m21:19:52.300422 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.totalordercustomername' was properly closed.
+[0m21:19:52.300422 [info ] [MainThread]: 
+[0m21:19:52.307374 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 3.30 seconds (3.30s).
+[0m21:19:52.312546 [debug] [MainThread]: Command end result
+[0m21:19:52.357038 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m21:19:52.362870 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m21:19:52.370342 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\run_results.json
+[0m21:19:52.371485 [info ] [MainThread]: 
+[0m21:19:52.373512 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m21:19:52.373512 [info ] [MainThread]: 
+[0m21:19:52.375531 [error] [MainThread]:   Database Error in model countfooddrinkorders (models\countfooddrinkorders.sql)
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [39:1]
+  compiled code at target\run\dbt_optimization_demo\models\countfooddrinkorders.sql
+[0m21:19:52.377312 [info ] [MainThread]: 
+[0m21:19:52.379515 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m21:19:52.380953 [debug] [MainThread]: Command `dbt build` failed at 21:19:52.380953 after 5.57 seconds
+[0m21:19:52.380953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159965B2D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159965B2D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159982A9150>]}
+[0m21:19:52.380953 [debug] [MainThread]: Flushing usage events
+[0m21:19:52.760192 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:20:30.940317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D248789450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2486AFAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D24878BE50>]}
+
+
+============================== 21:20:30.945103 | 7a3a70a0-7889-4751-9782-ad86fac9e721 ==============================
+[0m21:20:30.945103 [info ] [MainThread]: Running with dbt=1.9.4
+[0m21:20:30.945103 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m21:20:32.080296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7a3a70a0-7889-4751-9782-ad86fac9e721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D265883C90>]}
+[0m21:20:32.263978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7a3a70a0-7889-4751-9782-ad86fac9e721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2436AFD90>]}
+[0m21:20:32.270080 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m21:20:32.740127 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m21:20:32.850024 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:20:32.850024 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:20:32.860420 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_optimization_demo.example
+[0m21:20:32.882796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7a3a70a0-7889-4751-9782-ad86fac9e721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D265D7C450>]}
+[0m21:20:32.951943 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m21:20:32.961574 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m21:20:32.994326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7a3a70a0-7889-4751-9782-ad86fac9e721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D265F9EC10>]}
+[0m21:20:32.994326 [info ] [MainThread]: Found 3 models, 491 macros
+[0m21:20:32.994326 [info ] [MainThread]: 
+[0m21:20:33.000129 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:20:33.000129 [info ] [MainThread]: 
+[0m21:20:33.000129 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:20:33.005000 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers'
+[0m21:20:33.005000 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:20:35.074360 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo'
+[0m21:20:35.074360 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:20:35.310331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7a3a70a0-7889-4751-9782-ad86fac9e721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2658D6510>]}
+[0m21:20:35.310331 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:20:35.330317 [debug] [Thread-1 (]: Began running node model.dbt_optimization_demo.countfooddrinkorders
+[0m21:20:35.330317 [debug] [Thread-2 (]: Began running node model.dbt_optimization_demo.customerswithorders
+[0m21:20:35.330317 [info ] [Thread-1 (]: 1 of 3 START sql view model dbt_semantic_layer_demo.countfooddrinkorders ....... [RUN]
+[0m21:20:35.330317 [debug] [Thread-3 (]: Began running node model.dbt_optimization_demo.totalordercustomername
+[0m21:20:35.330317 [info ] [Thread-2 (]: 2 of 3 START sql view model dbt_semantic_layer_demo.customerswithorders ........ [RUN]
+[0m21:20:35.337959 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.countfooddrinkorders'
+[0m21:20:35.343733 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.customerswithorders'
+[0m21:20:35.346358 [debug] [Thread-2 (]: Began compiling node model.dbt_optimization_demo.customerswithorders
+[0m21:20:35.345305 [debug] [Thread-1 (]: Began compiling node model.dbt_optimization_demo.countfooddrinkorders
+[0m21:20:35.341720 [info ] [Thread-3 (]: 3 of 3 START sql view model dbt_semantic_layer_demo.totalordercustomername ..... [RUN]
+[0m21:20:35.375038 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.dbt_optimization_demo.totalordercustomername'
+[0m21:20:35.370519 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_optimization_demo.countfooddrinkorders"
+[0m21:20:35.365712 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_optimization_demo.customerswithorders"
+[0m21:20:35.377054 [debug] [Thread-3 (]: Began compiling node model.dbt_optimization_demo.totalordercustomername
+[0m21:20:35.380583 [debug] [Thread-1 (]: Began executing node model.dbt_optimization_demo.countfooddrinkorders
+[0m21:20:35.381634 [debug] [Thread-2 (]: Began executing node model.dbt_optimization_demo.customerswithorders
+[0m21:20:35.386832 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_optimization_demo.totalordercustomername"
+[0m21:20:35.452745 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_optimization_demo.customerswithorders"
+[0m21:20:35.460258 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_optimization_demo.countfooddrinkorders"
+[0m21:20:35.460258 [debug] [Thread-2 (]: On model.dbt_optimization_demo.customerswithorders: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.customerswithorders"} */
+
+
+  create or replace view `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`customerswithorders`
+  OPTIONS()
+  as with orders as (
+    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders
+),
+customers as (
+    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers
+),
+orders_with_customer as (
+    select
+        o.order_id,
+        o.customer_id,
+        (select c.name from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers c where c.customer_id = o.customer_id) as customer_name,
+        o.order_total,
+        o.ordered_at
+    from orders o
+)
+select * from orders_with_customer;
+
+
+[0m21:20:35.466023 [debug] [Thread-3 (]: Began executing node model.dbt_optimization_demo.totalordercustomername
+[0m21:20:35.466023 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:20:35.466023 [debug] [Thread-1 (]: On model.dbt_optimization_demo.countfooddrinkorders: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.countfooddrinkorders"} */
+
+
+  create or replace view `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`countfooddrinkorders`
+  OPTIONS()
+  as WITH food_orders AS (
+  SELECT
+    c.name,
+    COUNT(oi.order_item_id) AS item_count
+  FROM
+    `propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers` c
+    JOIN `propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders` o ON c.customer_id = o.customer_id
+    JOIN `propellingtech-demo-customers.dbt_semantic_layer_demo.order_items` oi ON o.order_id = oi.order_id
+  WHERE
+    oi.is_food_item = 1
+  GROUP BY
+    c.name
+),
+drink_orders AS (
+  SELECT
+    c.name,
+    COUNT(oi.order_item_id) AS item_count
+  FROM
+    `propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers` c
+    JOIN `propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders` o ON c.customer_id = o.customer_id
+    JOIN `propellingtech-demo-customers.dbt_semantic_layer_demo.order_items` oi ON o.order_id = oi.order_id
+  WHERE
+    oi.is_drink_item = 1
+  GROUP BY
+    c.name
+)
+SELECT
+  name,
+  item_count,
+  'food' AS item_type
+FROM
+  food_orders
+UNION ALL
+SELECT
+  name,
+  item_count,
+  'drink' AS item_type
+FROM
+  drink_orders;
+
+
+[0m21:20:35.475708 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_optimization_demo.totalordercustomername"
+[0m21:20:35.479442 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:20:35.486121 [debug] [Thread-3 (]: On model.dbt_optimization_demo.totalordercustomername: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "my-bigquery-db", "target_name": "dev", "node_id": "model.dbt_optimization_demo.totalordercustomername"} */
+
+
+  create or replace view `propellingtech-demo-customers`.`dbt_semantic_layer_demo`.`totalordercustomername`
+  OPTIONS()
+  as SELECT
+  (
+    SELECT
+      c.name
+    FROM
+      `propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers` c
+    WHERE
+      c.customer_id = o.customer_id
+  ) AS customer_name,
+  SUM(o.order_total) AS total_spent
+FROM
+  (
+    SELECT
+      *
+    FROM
+      `propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders`
+  ) AS o
+GROUP BY
+  customer_name
+ORDER BY
+  total_spent DESC;
+
+
+[0m21:20:35.490580 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:20:35.890466 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:58fc6b73-d1ca-424b-b0d0-35dd353afb69&page=queryresults
+[0m21:20:35.894321 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:a01eed1f-2724-443b-8621-2be8d0e2ea44&page=queryresults
+[0m21:20:35.896061 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=propellingtech-demo-customers&j=bq:europe-west1:68c373d2-8854-45cc-9b4d-6ecc4bb0f53a&page=queryresults
+[0m21:20:36.325884 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a3a70a0-7889-4751-9782-ad86fac9e721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D246B59650>]}
+[0m21:20:36.327904 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a3a70a0-7889-4751-9782-ad86fac9e721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2670B0050>]}
+[0m21:20:36.330420 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a3a70a0-7889-4751-9782-ad86fac9e721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2482FA810>]}
+[0m21:20:36.327904 [info ] [Thread-3 (]: 3 of 3 OK created sql view model dbt_semantic_layer_demo.totalordercustomername  [[32mCREATE VIEW (0 processed)[0m in 0.94s]
+[0m21:20:36.331486 [info ] [Thread-1 (]: 1 of 3 OK created sql view model dbt_semantic_layer_demo.countfooddrinkorders .. [[32mCREATE VIEW (0 processed)[0m in 0.98s]
+[0m21:20:36.334647 [debug] [Thread-3 (]: Finished running node model.dbt_optimization_demo.totalordercustomername
+[0m21:20:36.333603 [info ] [Thread-2 (]: 2 of 3 OK created sql view model dbt_semantic_layer_demo.customerswithorders ... [[32mCREATE VIEW (0 processed)[0m in 0.98s]
+[0m21:20:36.334647 [debug] [Thread-1 (]: Finished running node model.dbt_optimization_demo.countfooddrinkorders
+[0m21:20:36.334647 [debug] [Thread-2 (]: Finished running node model.dbt_optimization_demo.customerswithorders
+[0m21:20:36.344557 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:20:36.346179 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:20:36.347904 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers' was properly closed.
+[0m21:20:36.347904 [debug] [MainThread]: Connection 'list_propellingtech-demo-customers_dbt_semantic_layer_demo' was properly closed.
+[0m21:20:36.347904 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.countfooddrinkorders' was properly closed.
+[0m21:20:36.347904 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.customerswithorders' was properly closed.
+[0m21:20:36.350452 [debug] [MainThread]: Connection 'model.dbt_optimization_demo.totalordercustomername' was properly closed.
+[0m21:20:36.351987 [info ] [MainThread]: 
+[0m21:20:36.354085 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 3.35 seconds (3.35s).
+[0m21:20:36.355807 [debug] [MainThread]: Command end result
+[0m21:20:36.394508 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\manifest.json
+[0m21:20:36.400178 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\semantic_manifest.json
+[0m21:20:36.407221 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ManeChacon\PropellMate-DBT\dbt_optimization_demo\target\run_results.json
+[0m21:20:36.409228 [info ] [MainThread]: 
+[0m21:20:36.410614 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:20:36.410614 [info ] [MainThread]: 
+[0m21:20:36.412684 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m21:20:36.412684 [debug] [MainThread]: Command `dbt build` succeeded at 21:20:36.412684 after 5.55 seconds
+[0m21:20:36.412684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D242953D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2429C2D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2429C2D10>]}
+[0m21:20:36.416552 [debug] [MainThread]: Flushing usage events
+[0m21:20:36.810240 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:39:39.520179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C11E58B5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C11E3DCBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C11E5B2110>]}
+
+
+============================== 22:39:39.529124 | 61840130-0e25-4100-b587-2c84cc6cf9f1 ==============================
+[0m22:39:39.529124 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:39:39.531186 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'c:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'fail_fast': 'False', 'profiles_dir': 'c:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'True'}
+[0m22:39:39.752246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '61840130-0e25-4100-b587-2c84cc6cf9f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C11E5DB710>]}
+[0m22:39:39.797759 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m22:39:39.802346 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m22:39:39.804457 [debug] [MainThread]: Command `cli deps` succeeded at 22:39:39.804457 after 0.45 seconds
+[0m22:39:39.806471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C11E58B190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C11E594B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C11E2B9650>]}
+[0m22:39:39.807483 [debug] [MainThread]: Flushing usage events
+[0m22:39:44.295571 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:42:55.292049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDD17D05D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDD2AC41D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDD2AC7F10>]}
+
+
+============================== 22:42:55.302233 | 124119b4-5baf-48ea-9f29-af68d084749b ==============================
+[0m22:42:55.302233 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:42:55.302233 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ManeChacon\\PropellMate-DBT\\dbt_optimization_demo\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt build', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:42:55.312389 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'my-bigquery-db'
+[0m22:42:55.312389 [debug] [MainThread]: Command `dbt build` failed at 22:42:55.312389 after 0.26 seconds
+[0m22:42:55.312389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDD2AB7C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDD2AB7D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDD2AB7D90>]}
+[0m22:42:55.312389 [debug] [MainThread]: Flushing usage events
+[0m22:42:55.712503 [debug] [MainThread]: An error was encountered while trying to flush usage events

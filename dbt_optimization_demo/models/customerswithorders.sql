@@ -9,7 +9,7 @@
 */
 
 -- Materialize as view for real-time data without storage overhead
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 WITH 
 -- Base CTE: Get all orders from the fact table

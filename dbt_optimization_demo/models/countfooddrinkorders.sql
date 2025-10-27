@@ -9,7 +9,7 @@
 */
 
 -- Materialize as view for real-time reporting without storage costs
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 WITH 
 -- Base CTE: Join all necessary tables once to reduce redundant scans
