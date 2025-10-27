@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: countfooddrinkorders
+    description: "Aggregates food and drink order counts by customer. Optimized to use conditional aggregation instead of UNION ALL for better performance."
+    columns:
+      - name: name
+        description: "Customer name"
+      
+      - name: food_item_count
+        description: "Total number of food items ordered by the customer"
+      
+      - name: drink_item_count
+        description: "Total number of drink items ordered by the customer"
+
+  - name: customerswithorders
+    description: "Enriches order data with customer names. Optimized by replacing correlated subquery with standard JOIN for better performance."
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order"
+      
+      - name: customer_id
+        description: "Unique identifier for the customer who placed the order"
+      
+      - name: customer_name
+        description: "Name of the customer who placed the order"
+      
+      - name: order_total
+        description: "Total monetary value of the order"
+      
+      - name: ordered_at
+        description: "Timestamp when the order was placed"
+
+  - name: totalordercustomername
+    description: "Calculates total spending per customer, ranked by highest spenders. Optimized by eliminating correlated subquery and using efficient JOINs."
+    columns:
+      - name: customer_name
+        description: "Name of the customer"
+      
+      - name: total_spent
+        description: "Total amount spent by the customer across all orders"
