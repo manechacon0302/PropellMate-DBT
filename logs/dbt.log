@@ -1,0 +1,29 @@
+[0m10:27:49.268169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F81E7961D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F81E795490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F81E794D10>]}
+
+
+============================== 10:27:49.293185 | 8cc03ac3-21f2-4e3a-90bf-92dd8c4f62b0 ==============================
+[0m10:27:49.293185 [info ] [MainThread]: Running with dbt=1.9.4
+[0m10:27:49.293185 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ManeChacon\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:28:07.820873 [debug] [MainThread]: Starter project path: C:\Users\ManeChacon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\dbt\include\starter_project
+[0m10:28:08.006850 [info ] [MainThread]: 
+Your new dbt project "dbt_optimization_demo" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:28:08.008601 [info ] [MainThread]: Setting up your profile.
+[0m10:29:06.090937 [info ] [MainThread]: Profile dbt_optimization_demo written to C:\Users\ManeChacon\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m10:29:06.098482 [debug] [MainThread]: Command `dbt init` succeeded at 10:29:06.095336 after 76.93 seconds
+[0m10:29:06.098482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F81E795610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F83B36A210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F8188ADF10>]}
+[0m10:29:06.098482 [debug] [MainThread]: Flushing usage events
+[0m10:29:06.582655 [debug] [MainThread]: An error was encountered while trying to flush usage events
