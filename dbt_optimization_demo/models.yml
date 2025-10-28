@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: countfooddrinkorders
+    description: "Cuenta la cantidad de órdenes de comida y bebida."
+    columns:
+      - name: order_id
+        description: "Identificador único de la orden."
+      - name: item
+        description: "Elemento pedido, puede ser comida o bebida."
+      - name: quantity
+        description: "Cantidad del elemento pedido."
+
+  - name: customerswithorders
+    description: "Clientes que tienen órdenes registradas."
+    columns:
+      - name: customer_id
+        description: "Identificador único del cliente."
+      - name: order_count
+        description: "Número total de órdenes realizadas por el cliente."
+
+  - name: totalordercustomername
+    description: "Número total de órdenes por nombre de cliente."
+    columns:
+      - name: customer_name
+        description: "Nombre del cliente."
+      - name: total_orders
+        description: "Total de órdenes realizadas por el cliente."
+
