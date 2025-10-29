@@ -1,0 +1,39 @@
+# dbt Model Documentation for models/
+
+version: 2
+
+models:
+  - name: countfooddrinkorders
+    description: |
+      Counts the total food and drink items ordered per customer with a label indicating the item type (food or drink).
+    columns:
+      - name: name
+        description: Customer name
+      - name: item_count
+        description: Number of ordered items of the given type (food or drink)
+      - name: item_type
+        description: 'food' or 'drink'
+
+  - name: customerswithorders
+    description: |
+      Returns orders with customer names by joining orders and customers and eliminating correlated subqueries.
+    columns:
+      - name: order_id
+        description: Unique identifier for the order
+      - name: customer_id
+        description: Unique identifier for the customer
+      - name: customer_name
+        description: Name of the customer placing the order
+      - name: order_total
+        description: Total amount of the order
+      - name: ordered_at
+        description: Timestamp of when the order was placed
+
+  - name: totalordercustomername
+    description: |
+      Sums total order amount per customer and displays customer name, sorted by total spent descending.
+    columns:
+      - name: customer_name
+        description: Name of the customer
+      - name: total_spent
+        description: Total spend per customer
