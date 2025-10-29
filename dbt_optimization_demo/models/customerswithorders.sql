@@ -1,16 +1,13 @@
-with orders as (
-    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders
-),
-customers as (
-    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers
-),
-orders_with_customer as (
-    select
-        o.order_id,
-        o.customer_id,
-        (select c.name from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers c where c.customer_id = o.customer_id) as customer_name,
-        o.order_total,
-        o.ordered_at
-    from orders o
-)
-select * from orders_with_customer
+-- Produces orders joined with customer name. Eliminates inefficient correlated subquery by using a JOIN (improving cost & speed).
+-- Uses dbt source macros for all base table references to ensure correct source lineage.
+
+SELECT
+  o.order_id,
+  o.customer_id,
+  c.name AS customer_name, -- Pull customer name through join, not subquery
+  o.order_total,
+  o.ordered_at
+FROM
+  {{ source('dbt_semantic_layer_demo', 'fct_orders') }} o
+  JOIN {{ source('dbt_semantic_layer_demo', 'dim_customers') }} c
+    ON o.customer_id = c.customer_id
