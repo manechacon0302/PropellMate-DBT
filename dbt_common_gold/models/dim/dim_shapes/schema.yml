@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_shapes
+    description: "Tabla de gold"
+    config:
+      enabled: False
+      materialized: table
+      alias: Al_T_Dim_Shapes
+      cluster_by: ["IdLine", "IdItinerary"]

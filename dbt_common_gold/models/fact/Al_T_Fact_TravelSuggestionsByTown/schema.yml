@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: Al_T_Fact_TravelSuggestionsByTown
+    description: "Tabla de gold de sugerencias de Pueblos"
+    config:
+      enabled: True
+      materialized: table
+      alias: Al_T_Fact_TravelSuggestionsByTown
+      unique_keys:
+        - IdOrigin
+        - IdDestination
+      cluster_by: ["modifdate", "validStartDate", "ValidEndDate", "DeleteDate"]

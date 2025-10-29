@@ -1,0 +1,10 @@
+version: 
+
+models:
+  - name: Al_T_Dim_RutasAlsaSEO
+    description: "Tabla de gold Rutas Landing Alsa"
+    config:
+      materialized: table
+      enabled: True
+      alias: Al_T_Dim_RutasAlsaSEO
+      cluster_by: ["ModifDate", "validStartDate", "ValidEndDate", "DeleteDate"]

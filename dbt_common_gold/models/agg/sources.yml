@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bq_agg_silver_com
+    database: prj-slv-{{ target.name }}-westeu-01
+    schema: bq_com_{{ target.name }}_westeu_01
+    tables:
+      - name: Al_T_Agg_Activity_Date

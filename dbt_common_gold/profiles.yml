@@ -1,0 +1,19 @@
+my-bigquery-db:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: prj-gld-dev-westeu-01
+      execution_project: prj-com-dev-westeu-01
+      dataset: bq_com_test_westeu_01
+      location: europe-west1
+      threads: 4
+    pro:
+      type: bigquery
+      method: oauth
+      project: prj-gld-pro-westeu-01
+      execution_project: prj-com-pro-westeu-01
+      dataset: bq_com_gld_pro_westeu_01
+      location: europe-west1
+      threads: 4

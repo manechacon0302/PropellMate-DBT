@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: bq_fact_silver_com
+    database: prj-slv-{{ target.name }}-westeu-01
+    schema: bq_com_{{ target.name }}_westeu_01
+    tables:
+      - name: Al_T_Fact_Planner
+      - name: Al_T_Fact_ServiceActivity_PW
+      - name: Al_T_Fact_JourneySales
+      - name: Al_T_Fact_JourneySearches
+      - name: Al_T_Fact_Planweb_Xsercp_SA
+      - name: Al_T_Agg_PositionsControlORA
+      - name: Al_T_Agg_PositionsControlGCP
+      - name: Al_T_Dim_Systems
+
+  - name: bq_fact_gld_com
+    database: prj-gld-{{ target.name }}-westeu-01
+    schema: bq_com_test_westeu_01
+    tables:
+      - name: Al_T_Fact_SalesSearches
+
+  - name: bq_fact_gld_gemini
+    database: prj-gld-{{ target.name }}-westeu-01
+    schema: bq_gemini_gld_dev_westeu_01
+    tables:
+      - name: Al_T_Fact_TaggedMunicipalities

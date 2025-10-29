@@ -1,0 +1,37 @@
+SELECT
+  AlsaCaptureDate,
+  ProcessDate,
+  IntelligentID,
+  Price,
+  Rate,
+  TravelDate,
+  Company,
+  Type,
+  ServiceID,
+  Origin,
+  Destination,
+  CaptureDate,
+  Duration,
+  TravelTime,
+  DepartureTime,
+  ArrivalTime,
+  RateID,
+  RateName,
+  SubRateID,
+  SubRateName,
+  RouteID,
+  GroupName,
+  DepartureSlot,
+  BookingAnticipationDays,
+  TravelDayOfWeek,
+  OriginStation,
+  DestinationStation,
+  Observations,
+  Availability,
+  ExecutionDate,
+  InfoDateFrom,
+  InfoDateTo
+FROM {{ source('bq_dim_silver_com', 'Al_T_Fact_CompetitorsPricing') }}
+WHERE {{ var("version_date", get_config_value_v4("version_date")) }}
+  BETWEEN ValidStartDate AND COALESCE(ValidEndDate, '3000-1-1')
+AND DATE(modifdate) >= {{ var("modif_date", get_config_value_v4("modif_date")) }}

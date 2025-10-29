@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_evollineaEO
+    description: "Tabla de gold EvolLineaOS"
+    config:
+      unique_keys:
+        - IdLine
+        - IdZoneLine
+        - IdCompany
+        - DateLineStart
+        - DateLineStartEO
+      materialized: incremental_alsa
+      alias: Al_T_Dim_LineEvolOS
+      business_start_date: parse_timestamp("%Y%M%d", CAST(DateLineStart AS STRING))
+      cluster_by: ["modifdate", "validStartDate", "ValidEndDate", "DeleteDate"]
+      modif_date: DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 3 DAY)
+      version_date: CURRENT_TIMESTAMP()
+      historic: True
+      delete_strategy:
+        type: target
+      #delete_strategy:
+      #  type: source # source/target
+      #  source_unique_keys:
+      #    - table_name: ["bq_dim_silver_com", "Al_T_Dim_LineEvolOS"]
+      #      delete_clause: Null
+      #      unique_keys:
+      #        - IdLine: IdLine
+      #        - IdZoneLine: IdZoneLine
+      #        - IdCompany: IdCompany
+      #        - DateLineStart: DateLineStart
+      #        - DateLineStartEO: DateLineStartEO

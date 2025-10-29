@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: Al_T_Fact_SalesSearches
+    description: "Tabla Fact Gold Ventas Búsquedas Trayectos"
+    config:
+      materialized: incremental_alsa
+      alias: Al_T_Fact_SalesSearches
+      unique_keys:
+        - TravelMonthDate
+        - IdJourney
+      business_start_column: CURRENT_TIMESTAMP()
+      cluster_by: ["modifdate", "validStartDate", "ValidEndDate", "DeleteDate"]
+      version_date: CURRENT_TIMESTAMP()
+      historic: True

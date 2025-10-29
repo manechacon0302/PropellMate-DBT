@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: Al_T_Dim_JourneyLines
+    description: "Tabla de gold Lineas-Trayecto"
+    config:
+      materialized: incremental_alsa
+      alias: Al_T_Dim_JourneyLines
+      unique_keys:
+        - IdJourney
+        - IdLine
+      business_start_date: CURRENT_TIMESTAMP()
+      cluster_by: ["modifdate", "validStartDate", "ValidEndDate", "DeleteDate"]
+      version_date: CURRENT_TIMESTAMP()
+      historic: True

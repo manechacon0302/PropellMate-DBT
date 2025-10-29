@@ -1,0 +1,36 @@
+SELECT
+  OnlyHint,
+  DocumentNumber,
+  OriginCode,
+  OriginName,
+  DestinationCode,
+  DestinationName,
+  VACode,
+  LineCode,
+  LineName,
+  TripID,
+  BusNumber,
+  LineCategory,
+  GroupedChannel,
+  SaleDate,
+  TravelDate,
+  DepartureHour,
+  StopDate,
+  StopHour,
+  PromotionCode,
+  PromotionName,
+  DiscountCode,
+  DiscountName,
+  IsCancelledFlag,
+  TicketAmountNetVAT,
+  ClasPassAmountNetVAT,
+  DigitalPassAmountNetVAT,
+  Passengers,
+  ClasPassPassengers,
+  DigitalPassPassengers,
+  InfoDateFrom,
+  InfoDateTo
+FROM {{ source('bq_dim_silver_com', 'Al_T_Fact_Sales') }}
+WHERE {{ var("version_date", get_config_value_v4("version_date")) }}
+  BETWEEN ValidStartDate AND COALESCE(ValidEndDate, '3000-1-1')
+AND DATE(modifdate) >= {{ var("modif_date", get_config_value_v4("modif_date")) }}

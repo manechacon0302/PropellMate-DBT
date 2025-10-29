@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: Al_T_Fact_TravelSuggestions
+    description: "Tabla de gold de sugerencias de Trayectos"
+    config:
+      enabled: True
+      materialized: table
+      alias: Al_T_Fact_TravelSuggestions
+      unique_keys:
+        - IdJourney
+        - IdLine
+        - TypeSuggestion
+        - MunicipalityNameSuggested
+      cluster_by: ["TypeSuggestion", "validStartDate", "ValidEndDate", "DeleteDate"]

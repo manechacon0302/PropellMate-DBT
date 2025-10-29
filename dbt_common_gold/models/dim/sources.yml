@@ -1,0 +1,72 @@
+version: 2
+
+sources:
+
+  - name: bq_dim_silver_com
+    database: prj-slv-{{ target.name }}-westeu-01
+    schema: bq_com_{{ target.name }}_westeu_01
+    tables:
+      - name: Al_T_Dim_Vehicle
+      - name: Al_T_Dim_Line
+      - name: Al_T_Dim_Stops
+      - name: Al_T_Dim_Shapes
+      - name: Al_T_Dim_Zone
+      - name: Al_T_Dim_Division
+      - name: Al_T_Dim_ZonalUnit
+      - name: Al_T_Dim_Axis
+      - name: Al_T_Dim_Company
+      - name: Al_T_Dim_Brand
+      - name: Al_T_Dim_Model
+      - name: Al_T_Dim_Fuel
+      - name: Al_T_Dim_ContractGroup
+      - name: Al_T_Dim_LineEvol
+      - name: Al_T_Dim_LineEvolOS
+      - name: Al_T_Dim_CompanyZoneEvol
+      - name: Al_T_Dim_VehicleEvol
+      - name: Al_T_Dim_DriverCompanyEvol
+      - name: Al_T_Dim_Calendar
+      - name: Al_T_Dim_Driver
+      - name: Al_T_Dim_Employee
+      - name: Al_T_Dim_VehicleGarageEvol
+      - name: Al_T_Dim_Systems
+      - name: Al_T_Dim_ClosingDates
+      - name: Al_T_Dim_Gender
+      - name: Al_T_Dim_Translations
+      - name: Al_T_Dim_Itinerary
+      - name: Al_T_Dim_TypeTrans
+      - name: Al_T_Dim_Concession
+      - name: Al_T_Dim_ServiceType
+      - name: Al_T_Dim_Expedition
+      - name: Al_T_Dim_Town
+      - name: Al_T_Dim_ServiceSubType
+      - name: Al_T_Dim_Subsituation
+      - name: Al_T_Dim_Journey
+      - name: Al_T_Dim_Route
+      - name: Al_T_Dim_AlsaProviders
+      - name: Al_T_Fact_CompetitorsPricing
+      - name: Al_T_Fact_Sales
+      - name: Al_T_Fact_VehicleOccupancy
+      - name: Al_T_Dim_RutasAlsaSEO
+      - name: Al_T_Dim_TownAlias
+
+  - name: bq_dim_silver_com_marital
+    database: prj-slv-{{ target.name }}-westeu-01
+    schema: bq_com_{{ target.name }}_westeu_01
+    tables: 
+      - name: Al_T_Dim_MaritalStatus
+
+  - name: bq_dim_gld_com
+    database: prj-gld-{{ target.name }}-westeu-01
+    schema: bq_com_test_westeu_01
+    tables:
+      - name: Al_T_Dim_RouteJourneys
+      - name: Al_T_Dim_Line
+      - name: Al_T_Dim_JourneyLines
+      - name: Al_T_Dim_TownAlias
+
+  - name: bq_dim_gld_gemini
+    database: prj-gld-{{ target.name }}-westeu-01
+    schema: bq_gemini_gld_dev_westeu_01
+    tables:
+      - name: Al_T_Dim_MunicipalityTags
+      - name: Al_T_Dim_MunicipalityTowns

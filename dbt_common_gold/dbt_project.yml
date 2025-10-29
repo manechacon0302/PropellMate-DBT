@@ -1,0 +1,16 @@
+name: 'dbt_common_gold'
+version: '1.0'
+config-version: 2
+
+
+profile: 'my-bigquery-db'
+
+macro-paths: ["../dbt_common_macros"]
+
+model-paths: ["models"]
+
+models:
+    +persist_docs:
+      relation: true
+      columns: true
+

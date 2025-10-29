@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_tipotransporte
+    description: "Tabla de gold tipotransporte"
+    config:
+      materialized: incremental_alsa
+      alias: Al_T_Dim_TypeTrans
+      unique_keys:
+        - IdTypeTransport
+      business_start_date: TIMESTAMP('1900-01-01')
+      cluster_by: ["modifdate", "validStartDate", "ValidEndDate", "DeleteDate"]
+      modif_date: DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 3 DAY)
+      version_date: CURRENT_TIMESTAMP()
+      historic: True
+      delete_strategy:
+        type: target
+      #delete_strategy:
+      #  type: source
+      #  source_unique_keys:
+      #    - table_name: ["bq_dim_silver_com", "Al_T_Dim_TypeTrans"]
+      #      delete_clause: Null
+      #      unique_keys:
+      #        - IdTypeTransport: IdTypeTransport
+      #        - DescTypeTransport: DescTypeTransport

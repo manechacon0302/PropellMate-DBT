@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: Al_T_Fact_CompetitorsPricing
+    description: "Tabla de gold Precios Competencia"
+    config:
+      materialized: incremental_alsa
+      alias: Al_T_Fact_CompetitorsPricing
+      unique_keys:
+        - AlsaCaptureDate
+        - ProcessDate
+        - IntelligentID
+        - Price
+        - Rate
+        - TravelDate
+        - Company
+        - Type
+        - ServiceID
+        - Origin
+        - Destination
+        - CaptureDate
+        - Duration
+        - TravelTime
+        - DepartureTime
+        - ArrivalTime
+        - RateID
+        - RateName
+        - SubRateID
+        - SubRateName
+        - RouteID
+        - GroupName
+        - DepartureSlot
+        - BookingAnticipationDays
+        - TravelDayOfWeek
+        - OriginStation
+        - DestinationStation
+        - Observations
+        - Availability
+        - ExecutionDate
+        - InfoDateFrom
+        - InfoDateTo
+      business_start_date: CURRENT_TIMESTAMP()
+      cluster_by: ["modifdate", "validStartDate", "ValidEndDate", "DeleteDate"]
+      modif_date: DATE_SUB(CURRENT_DATE(), INTERVAL 2 DAY)
+      version_date: CURRENT_TIMESTAMP()
+      historic: True

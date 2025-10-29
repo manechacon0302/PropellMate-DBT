@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: Al_T_Dim_TownAlias
+    description: "Tabla de gold Alias Pueblo"
+    config:
+      materialized: incremental_alsa
+      alias: Al_T_Dim_TownAlias
+      unique_keys:
+        - IdTown
+      business_start_date: CURRENT_TIMESTAMP()
+      cluster_by: ["modifdate", "validStartDate", "ValidEndDate", "DeleteDate"]
+      version_date: CURRENT_TIMESTAMP()
+      historic: True

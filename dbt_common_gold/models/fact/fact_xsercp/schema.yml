@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: fact_xsercp
+    description: "Tabla de gold"
+    config:
+      enabled: False
+      materialized: table
+      alias: Al_T_Fact_Planner
+      cluster_by: ["TravelDate", "IdLine", "LicensePlate"]

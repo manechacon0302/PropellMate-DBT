@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bq_com_slv
+    database: prj-slv-{{ target.name }}-westeu-01
+    schema: bq_com_{{ target.name }}_westeu_01
+    tables:
+      - name: Al_T_Lkt_VehicleEvolLV_Stg1
+      - name: Al_T_Lkt_SecondaryVehicleProvider

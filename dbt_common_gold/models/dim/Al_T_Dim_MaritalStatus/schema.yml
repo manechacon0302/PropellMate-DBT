@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: Al_T_Dim_MaritalStatus
+    description: "Tabla de gold"
+    config:
+      materialized: incremental_alsa
+      alias: Al_T_Dim_MaritalStatus
+      unique_keys:
+        - MaritalStatus
+      cluster_by: ["modifdate", "validStartDate", "ValidEndDate", "DeleteDate"]
+      modif_date: DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 3 DAY)
+      version_date: CURRENT_TIMESTAMP()
+      historic: True
+      delete_strategy:
+        type: target
+      #delete_strategy:
+      #  type: source
+      #  source_unique_keys:
+      #    - table_name: ["bq_dim_silver_com_marital", "Al_T_Dim_MaritalStatus"]
+      #      delete_clause: Null
+      #      unique_keys:
+      #        - MaritalStatus: MaritalStatus

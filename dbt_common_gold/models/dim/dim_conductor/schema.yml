@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dim_conductor
+    description: "Tabla de gold"
+    columns:
+      - name: MaritalStatus
+        policy_tags:
+          - "{% if target.name == 'dev' %}projects/prj-bze-dev-westeu-01/locations/europe-west1/taxonomies/3706336757786153057/policyTags/6567225512041647482{% elif target.name == 'pro' %}projects/prj-bze-pro-westeu-01/locations/europe-west1/taxonomies/5727638790221301535/policyTags/4894498579579923848{% endif %}"
+      - name: Sex
+        policy_tags:
+          - "{% if target.name == 'dev' %}projects/prj-bze-dev-westeu-01/locations/europe-west1/taxonomies/3706336757786153057/policyTags/6567225512041647482{% elif target.name == 'pro' %}projects/prj-bze-pro-westeu-01/locations/europe-west1/taxonomies/5727638790221301535/policyTags/4894498579579923848{% endif %}"
+      - name: IdNational
+        policy_tags:
+          - "{% if target.name == 'dev' %}projects/prj-bze-dev-westeu-01/locations/europe-west1/taxonomies/3706336757786153057/policyTags/6567225512041647482{% elif target.name == 'pro' %}projects/prj-bze-pro-westeu-01/locations/europe-west1/taxonomies/5727638790221301535/policyTags/4894498579579923848{% endif %}"
+      - name: Name
+        policy_tags:
+          - "{% if target.name == 'dev' %}projects/prj-bze-dev-westeu-01/locations/europe-west1/taxonomies/3706336757786153057/policyTags/6567225512041647482{% elif target.name == 'pro' %}projects/prj-bze-pro-westeu-01/locations/europe-west1/taxonomies/5727638790221301535/policyTags/4894498579579923848{% endif %}"
+      - name: Surname1
+        policy_tags:
+          - "{% if target.name == 'dev' %}projects/prj-bze-dev-westeu-01/locations/europe-west1/taxonomies/3706336757786153057/policyTags/6567225512041647482{% elif target.name == 'pro' %}projects/prj-bze-pro-westeu-01/locations/europe-west1/taxonomies/5727638790221301535/policyTags/4894498579579923848{% endif %}"
+      - name: Surname2
+        policy_tags:
+          - "{% if target.name == 'dev' %}projects/prj-bze-dev-westeu-01/locations/europe-west1/taxonomies/3706336757786153057/policyTags/6567225512041647482{% elif target.name == 'pro' %}projects/prj-bze-pro-westeu-01/locations/europe-west1/taxonomies/5727638790221301535/policyTags/4894498579579923848{% endif %}"
+    config:
+      materialized: incremental_alsa
+      alias: Al_T_Dim_Driver_2
+      unique_keys:
+        - IdCompany
+        - IdDriver
+      business_start_date: parse_timestamp("%Y%M%d", CAST(DateDriverStart AS STRING))
+      cluster_by: ["modifdate", "validStartDate", "ValidEndDate", "DeleteDate"]
+      modif_date: DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 3 DAY)
+      version_date: CURRENT_TIMESTAMP()
+      historic: True
+      delete_strategy:
+        type: target
