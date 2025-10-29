@@ -1,21 +1,10 @@
+-- This model computes total spending by each customer.
+-- Refactored to remove redundant subquery and use direct joins with sources.
+
 SELECT
-  (
-    SELECT
-      c.name
-    FROM
-      `propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers` c
-    WHERE
-      c.customer_id = o.customer_id
-  ) AS customer_name,
+  c.name AS customer_name,
   SUM(o.order_total) AS total_spent
-FROM
-  (
-    SELECT
-      *
-    FROM
-      `propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders`
-  ) AS o
-GROUP BY
-  customer_name
-ORDER BY
-  total_spent DESC
+FROM {{ source('dbt_semantic_layer_demo', 'fct_orders') }} o
+JOIN {{ source('dbt_semantic_layer_demo', 'dim_customers') }} c ON o.customer_id = c.customer_id
+GROUP BY c.name
+ORDER BY total_spent DESC
