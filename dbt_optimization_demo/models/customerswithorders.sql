@@ -1,16 +1,20 @@
-with orders as (
-    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders
+-- This model lists orders along with customer names, 
+-- optimized by replacing a correlated subquery with a join for better performance.
+
+WITH orders AS (
+    SELECT * FROM {{ source('dbt_semantic_layer_demo', 'fct_orders') }}
 ),
-customers as (
-    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers
+customers AS (
+    SELECT * FROM {{ source('dbt_semantic_layer_demo', 'dim_customers') }}
 ),
-orders_with_customer as (
-    select
+orders_with_customer AS (
+    SELECT
         o.order_id,
         o.customer_id,
-        (select c.name from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers c where c.customer_id = o.customer_id) as customer_name,
+        c.name AS customer_name,  -- Join instead of subquery for performance
         o.order_total,
         o.ordered_at
-    from orders o
+    FROM orders o
+    JOIN customers c ON o.customer_id = c.customer_id
 )
-select * from orders_with_customer
+SELECT * FROM orders_with_customer
