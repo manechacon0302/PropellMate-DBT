@@ -1,21 +1,14 @@
+-- Sums order total per customer and displays customer name
+-- Replaces inefficient correlated subquery with a JOIN for better performance and cost
+-- All sources referenced via dbt 'source' macro
+
 SELECT
-  (
-    SELECT
-      c.name
-    FROM
-      `propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers` c
-    WHERE
-      c.customer_id = o.customer_id
-  ) AS customer_name,
+  c.name AS customer_name,
   SUM(o.order_total) AS total_spent
 FROM
-  (
-    SELECT
-      *
-    FROM
-      `propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders`
-  ) AS o
+  {{ source('dbt_semantic_layer_demo', 'fct_orders') }} o
+  JOIN {{ source('dbt_semantic_layer_demo', 'dim_customers') }} c ON o.customer_id = c.customer_id
 GROUP BY
-  customer_name
+  c.name
 ORDER BY
   total_spent DESC
