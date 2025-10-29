@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_orders_with_customers
+    description: "Intermediate model joining orders with customer information"
+    columns:
+      - name: order_id
+        description: "Unique identifier for the order"
+      - name: customer_id
+        description: "Customer identifier"
+      - name: customer_name
+        description: "Name of the customer"
+      - name: order_total
+        description: "Total amount of the order"
+      - name: ordered_at
+        description: "Timestamp when order was placed"
