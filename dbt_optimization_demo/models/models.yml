@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Staging model for customer dimension data"
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer"
+      - name: name
+        description: "Customer name"
+
+  - name: stg_orders
+    description: "Staging model for orders fact data"
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order"
+      - name: customer_id
+        description: "Foreign key to customer dimension"
+      - name: order_total
+        description: "Total value of the order"
+      - name: ordered_at
+        description: "Timestamp when the order was placed"
+
+  - name: stg_order_items
+    description: "Staging model for order items data"
+    columns:
+      - name: order_item_id
+        description: "Unique identifier for each order item"
+      - name: order_id
+        description: "Foreign key to orders fact table"
+      - name: is_food_item
+        description: "Flag indicating if the item is a food item (1=yes, 0=no)"
+      - name: is_drink_item
+        description: "Flag indicating if the item is a drink item (1=yes, 0=no)"
+
+  - name: customerswithorders
+    description: "Orders enriched with customer information"
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order"
+      - name: customer_id
+        description: "Unique identifier for each customer"
+      - name: customer_name
+        description: "Name of the customer who placed the order"
+      - name: order_total
+        description: "Total value of the order"
+      - name: ordered_at
+        description: "Timestamp when the order was placed"
+
+  - name: totalordercustomername
+    description: "Total spending per customer sorted by amount spent"
+    columns:
+      - name: customer_name
+        description: "Name of the customer"
+      - name: total_spent
+        description: "Total amount spent by the customer across all orders"
+
+  - name: countfooddrinkorders
+    description: "Count of food and drink items ordered by each customer"
+    columns:
+      - name: name
+        description: "Customer name"
+      - name: item_count
+        description: "Number of items ordered"
+      - name: item_type
+        description: "Type of item: 'food' or 'drink'"
