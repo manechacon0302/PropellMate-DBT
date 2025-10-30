@@ -1,16 +1,17 @@
-with orders as (
-    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.fct_orders
+WITH orders AS (
+    SELECT * FROM {{ ref('stg_orders') }}
 ),
-customers as (
-    select * from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers
+customers AS (
+    SELECT * FROM {{ ref('stg_customers') }}
 ),
-orders_with_customer as (
-    select
+orders_with_customer AS (
+    SELECT
         o.order_id,
         o.customer_id,
-        (select c.name from propellingtech-demo-customers.dbt_semantic_layer_demo.dim_customers c where c.customer_id = o.customer_id) as customer_name,
+        c.name AS customer_name,
         o.order_total,
         o.ordered_at
-    from orders o
+    FROM orders o
+    LEFT JOIN customers c ON o.customer_id = c.customer_id
 )
-select * from orders_with_customer
+SELECT * FROM orders_with_customer
